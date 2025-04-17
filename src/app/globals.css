@@ -1,42 +1,121 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: "New Amsterdam", sans-serif;
+  transition: ease-in .3s;
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
+:root{
+  --primary-100:#7FFF00;
+  --primary-200:#22D119;
+  --primary-300:#188912;
+  --accent-100:#9356bc;
+  --accent-200:#BC6FF1;
+  --text-100:#ffffff;
+  --text-200:#e0e0e0;
+  --bg-100:#000000;
+  --bg-200:#202020;
+  --bg-300:#312F2F;
+
+    
+}
+
+.light-theme {
+  --primary-100:#FF2222;
+  --primary-200:#FF5151;
+  --primary-300:#c03c3c;
+  --accent-100:#0f6574;
+  --accent-200:#093a43;
+  --text-100:#000000;
+  --text-200:#313131;
+  --bg-100:#ffffff;
+  --bg-200:#ECECEC;
+  --bg-300:#d1d1d1;
+    
+    
+}
+
+.App{
+  background-color: var(--bg-200);
+}
+
+p, ul li, button{
+  font-family: "Work Sans", sans-serif;
+}
+
+ul li{
+  list-style: none;
+}
+
+a{
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+h2{
+  font-size: 35px;
+  color: var(--text-100);
+  font-weight: 600;
+}
+
+h3{
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--primary-300);
+}
+
+button{
+  padding: 15px 25px;
+  border: none;
+  border: 1px solid var(--bg-300);
+  background-color: var(--bg-300);
+  color: var(--text-100);
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.5s ease-in-out;
+  font-weight: 700;
+  &:hover{
+    background-color: var(--primary-200);
+    color: var(--text-100);
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 4rem 5rem;
+}
+
+.container h2{
+  font-size: 45px;
+  padding: 1rem;
+}
+
+svg{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-inline:10px;
+  fill: var(--text-100);
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .container h2 {
+    font-size: 38px;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 3rem;
   }
 }
