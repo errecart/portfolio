@@ -87,6 +87,13 @@ const Education = () => {
       icon: "assets/icons/knowledge/design.svg",
       state: "NEW!!",
       color: "#c1c1c1"
+    },
+    {
+      id: 15,
+      title: "GraphQL",
+      icon: "assets/icons/knowledge/graphql.svg",
+      color: "#f807c4",
+      state: "NEW!!",
     }
   ];
 

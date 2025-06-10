@@ -7,7 +7,7 @@ const Main = () => {
     <div className="container" id="main">
       <div className="main-container">
         <div className="main-title">
-          <span>Front-end Developer</span>
+          <span>Front-end Developer & UX/UI Designer</span>
           <h1>Juan Ignacio Errecart</h1>
         </div>
         <div className="main-img">
