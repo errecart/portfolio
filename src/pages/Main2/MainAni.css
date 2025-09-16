@@ -1,0 +1,43 @@
+
+.main_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: 3.5rem;
+}
+.main_info h1 {
+  font-size: 6rem;
+  line-height: 2ch;
+  margin-block: 1rem;
+  text-align: center;
+  color: var(--text-100);
+}
+.main_info span {
+  font-size: 1.5rem;
+  color: var(--primary-200);
+  line-height: 2ch;
+}
+.main_info p {
+  font-size: 1rem;
+  line-height: 2.3ch;
+  opacity: 60%;
+  width: 45%;
+}
+
+@media (max-width: 1024px) {
+  .main_info p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 530px) {
+  .main_info h1 {
+    font-size: 4rem;
+  }
+  .main_info p {
+    font-size: .8rem
+  }
+}
+
+

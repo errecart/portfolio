@@ -13,6 +13,7 @@
       gap: 10px;
       border-radius: 8px;
       border: 1.5px solid var(--accent-100);
+      background-color: var(--bg-200);
       padding: 15px;
       cursor: pointer;
       width: 225px;
@@ -30,14 +31,20 @@
         width: 20%;
         height: 20%;
         z-index: 2;
+        filter: brightness(0) invert(1);
       }
       span{
         font-size: 12px;
         animation: shine 2s infinite;
-            z-index: 2;
+        z-index: 2;
       }
     }
+    
 }
+  .knowledge-item:hover {
+    box-shadow: 0 0 15px var(--hover-color);
+    border: none;
+  }
 @keyframes shine {
   0% {
     color: #7fffd4;
@@ -68,6 +75,10 @@
 
 .knowledge-item:hover::before {
   left: 0;
+}
+
+.knowledge-item:hover img{
+  filter: brightness(0) invert(0);
 }
 
 

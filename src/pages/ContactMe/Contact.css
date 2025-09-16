@@ -1,5 +1,6 @@
 .contact {
   margin: 2rem 0;
+  z-index: 30;
 }
 
 p{
@@ -26,8 +27,11 @@ p{
   justify-content: center;
   flex-direction: column;
   margin: 1.5rem;
-  border: 1px solid var(--primary-300);
+  border: 2.5px solid var(--primary-200);
   cursor: pointer;
+}
+.item-c:hover {
+  box-shadow: 0 8px 32px var(--primary-200);
 }
 
 .item-c svg{

@@ -35,6 +35,10 @@
   --bg-300:#d1d1d1;
 }
 
+.light-theme img {
+  filter: none !important;
+}
+
 .App{
   background-color: var(--bg-200);
 }
@@ -80,6 +84,12 @@ button{
   }
 }
 
+#experience,
+#home,
+#contact{
+  position: relative;
+  z-index: 30;
+}
 .container {
   text-align: center;
   padding: 4rem 5rem;
