@@ -8,11 +8,31 @@ const Experience = () => {
       title: "GETOUT STUDIO",
       text: "creation of the page to video game studio",
       categories: [
-        "assets/icons/knowledge/react.svg",
-        "assets/icons/knowledge/CSS.svg",
-        "assets/icons/knowledge/javascript.svg",
-        "assets/icons/knowledge/tailwindcss.svg",
-        "assets/icons/knowledge/figma.svg",
+        {
+          src: "assets/icons/knowledge/react.svg",
+          alt: "React icon",
+          name: "React",
+        },
+        {
+          src: "assets/icons/knowledge/CSS.svg",
+          alt: "CSS icon",
+          name: "CSS",
+        },
+        {
+          src: "assets/icons/knowledge/javascript.svg",
+          alt: "JavaScript icon",
+          name: "JavaScript",
+        },
+        {
+          src: "assets/icons/knowledge/tailwindcss.svg",
+          alt: "Tailwind CSS icon",
+          name: "Tailwind CSS",
+        },
+        {
+          src: "assets/icons/knowledge/figma.svg",
+          alt: "Figma icon",
+          name: "Figma",
+        },
       ],
       link: "https://getout-studio.com",
       date: "2024 (Apr - Jun)",
@@ -23,9 +43,26 @@ const Experience = () => {
       title: "PEPOLA",
       text: "Creation of the page to video game studio",
       categories: [
-        "assets/icons/knowledge/react.svg",
-        "assets/icons/knowledge/CSS.svg",
-        "assets/icons/knowledge/javascript.svg",
+        {
+          src: "assets/icons/knowledge/tailwindcss.svg",
+          alt: "Tailwind CSS icon",
+          name: "Tailwind CSS",
+        },
+        {
+          src: "assets/icons/knowledge/react.svg",
+          alt: "React icon",
+          name: "React",
+        },
+        {
+          src: "assets/icons/knowledge/CSS.svg",
+          alt: "CSS icon",
+          name: "CSS",
+        },
+        {
+          src: "assets/icons/knowledge/javascript.svg",
+          alt: "JavaScript icon",
+          name: "JavaScript",
+        },
       ],
       link: "https://pepola.in",
       date: "2024 (Jul - Ago)",
@@ -36,9 +73,21 @@ const Experience = () => {
       title: "Flora EXP",
       text: "Plant care app with a gaming experience.",
       categories: [
-        "assets/icons/knowledge/figma.svg",
-        "assets/icons/knowledge/googleslides.svg",
-        "assets/icons/knowledge/design.svg",
+        {
+          src: "assets/icons/knowledge/figma.svg",
+          alt: "Figma icon",
+          name: "Figma",
+        },
+        {
+          src: "assets/icons/knowledge/googleslides.svg",
+          alt: "Google Slides icon",
+          name: "Google Slides",
+        },
+        {
+          src: "assets/icons/knowledge/design.svg",
+          alt: "Design icon",
+          name: "Design",
+        },
       ],
       date: "2024 - 2025",
       link: "https://www.behance.net/gallery/224568925/Flora-Exp-Case-Study",
@@ -49,13 +98,41 @@ const Experience = () => {
       title: "Visdan Agency",
       text: "Frontend developer position for a digital marketing studio, also developing the studio's website",
       categories: [
-        "assets/icons/knowledge/nextdotjs.svg",
-        "assets/icons/knowledge/CSS.svg",
-        "assets/icons/knowledge/javascript.svg",
-        "assets/icons/knowledge/tailwindcss.svg",
-        "assets/icons/knowledge/figma.svg",
-        "assets/icons/knowledge/nodedotjs.svg",
-        "assets/icons/knowledge/design.svg",
+        {
+          src: "assets/icons/knowledge/nextdotjs.svg",
+          alt: "Next.js icon",
+          name: "Next.js",
+        },
+        {
+          src: "assets/icons/knowledge/CSS.svg",
+          alt: "CSS icon",
+          name: "CSS",
+        },
+        {
+          src: "assets/icons/knowledge/javascript.svg",
+          alt: "JavaScript icon",
+          name: "JavaScript",
+        },
+        {
+          src: "assets/icons/knowledge/tailwindcss.svg",
+          alt: "Tailwind CSS icon",
+          name: "Tailwind CSS",
+        },
+        {
+          src: "assets/icons/knowledge/figma.svg",
+          alt: "Figma icon",
+          name: "Figma",
+        },
+        {
+          src: "assets/icons/knowledge/nodedotjs.svg",
+          alt: "Node.js icon",
+          name: "Node.js",
+        },
+        {
+          src: "assets/icons/knowledge/design.svg",
+          alt: "Design icon",
+          name: "Design",
+        },
       ],
       link: "https://www.visdan.agency",
       date: "2024 - Present",
@@ -91,8 +168,9 @@ const Experience = () => {
                   <li key={index}>
                     <img
                       className="experience-icon"
-                      src={`/${category}`}
-                      alt=""
+                      src={`/${category.src}`}
+                      alt={category.alt || category.name}
+                      title={category.name}
                     />
                   </li>
                 ))}
