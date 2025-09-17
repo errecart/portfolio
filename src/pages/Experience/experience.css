@@ -1,6 +1,7 @@
 .experience-developer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
   gap: 2rem;
   padding: 2rem 5rem;
 }
@@ -67,5 +68,15 @@
   }
   .experience-item {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .experience-item {
+    padding:1rem;
+    width: 200px;
+    p{
+      font-size: .5rem;
+    }
   }
 }
