@@ -85,10 +85,9 @@ button{
 }
 
 #experience,
-#home,
+#main,
 #contact{
   position: relative;
-  z-index: 30;
 }
 .container {
   text-align: center;

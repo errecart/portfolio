@@ -14,7 +14,7 @@ const Experience = () => {
           name: "React",
         },
         {
-          src: "assets/icons/knowledge/CSS.svg",
+          src: "assets/icons/knowledge/css.svg",
           alt: "CSS icon",
           name: "CSS",
         },
@@ -54,7 +54,7 @@ const Experience = () => {
           name: "React",
         },
         {
-          src: "assets/icons/knowledge/CSS.svg",
+          src: "assets/icons/knowledge/css.svg",
           alt: "CSS icon",
           name: "CSS",
         },
@@ -104,7 +104,7 @@ const Experience = () => {
           name: "Next.js",
         },
         {
-          src: "assets/icons/knowledge/CSS.svg",
+          src: "assets/icons/knowledge/css.svg",
           alt: "CSS icon",
           name: "CSS",
         },

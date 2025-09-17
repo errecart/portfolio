@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   margin-block: 3.5rem;
+  z-index: 50;
 }
 .main_info h1 {
   font-size: 6rem;
