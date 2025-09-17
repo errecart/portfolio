@@ -168,7 +168,7 @@ const Experience = () => {
                   <li key={index}>
                     <img
                       className="experience-icon"
-                      src={`/${category.src}`}
+                      src={category.src}
                       alt={category.alt || category.name}
                       title={category.name}
                     />
