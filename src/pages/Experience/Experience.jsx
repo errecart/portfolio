@@ -34,7 +34,7 @@ const Experience = () => {
           name: "Figma",
         },
       ],
-      link: "https://getout-studio.com",
+      link: "",
       date: "2024 (Apr - Jun)",
       mode: "Freelance",
     },
@@ -143,9 +143,34 @@ const Experience = () => {
       title: "Hogarth",
       text: "Position as a Web Developer working on an account for one of the world's leading technology companies. I fulfill the role of Localization and Adaptation of the company's website working alongside a highly demanding and agile team.",
       categories: [],
-      link: "https://www.visdan.agency",
+      link: "",
       date: "2025 (Jul - Sept)",
       mode: "Temporary Contract",
+    },
+    {
+      id: 6,
+      title: "LunluntaWines",
+      text: "Implementation of design for a new responsive website for a renowned vineyard, Argentina.",
+      categories: [
+        {
+          src: "assets/icons/knowledge/html5.svg",
+          alt: "HTML icon",
+          name: "HTML",
+        },
+        {
+          src: "assets/icons/knowledge/css.svg",
+          alt: "CSS icon",
+          name: "CSS",
+        },
+        {
+          src: "assets/icons/knowledge/javascript.svg",
+          alt: "JavaScript icon",
+          name: "JavaScript",
+        },
+      ],
+      link: "https://www.lunluntawines.com/",
+      date: "2025 (Oct - Dic)",
+      mode: "Freelance",
     },
   ];
 
@@ -157,7 +182,37 @@ const Experience = () => {
           {developer.map((item) => (
             <div className="experience-item" key={item.id}>
               <div>
-                <h3>{item.title}</h3>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <h3>{item.title}</h3>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="200"
+                        height="200"
+                        viewBox="0 0 15 15"
+                        className="window_icon"
+                      >
+                        <path
+
+                          fillRule="evenodd"
+                          d="M12 13a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v3.5a.5.5 0 0 0 1 0V3h9v9H8.5a.5.5 0 0 0 0 1H12ZM9 6.5v3a.5.5 0 0 1-1 0V7.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 7H5.5a.5.5 0 0 1 0-1h3a.498.498 0 0 1 .5.497"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  ) : null}
+                </div>
                 <p>{item.text}</p>
                 <p className="experience-date">
                   {item.mode} | {item.date}

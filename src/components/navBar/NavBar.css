@@ -34,17 +34,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: height 260ms cubic-bezier(0.4,0,0.2,1), margin 260ms cubic-bezier(0.4,0,0.2,1), background-color 260ms cubic-bezier(0.4,0,0.2,1), color 260ms cubic-bezier(0.4,0,0.2,1), border-radius 260ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.navbar-item .svg-icon {
+  transition: fill 260ms cubic-bezier(0.4,0,0.2,1), transform 260ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .navbar-item:hover,
 .navbar-item.active{
-  height: 80px;
-  margin-top: -20px;
+  height: 72px; /* menos salto */
+  margin-top: -12px;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
   background-color: var(--primary-100);
   color: var(--bg-100);
-  font-weight: 800;
+  font-weight: 700;
   svg{
     fill: var(--bg-100);
     color: var(--bg-100);

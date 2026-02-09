@@ -16,7 +16,6 @@ const Contact = () => {
   return (
     <div className="container" id="contact">
       <h2>Contact Me</h2>
-      <p>For any info about me and my work you have my links</p>
       <div className="contact">
         {/* <input type="text" /><span>button</span>
         <p>Write me a message</p> */}
@@ -36,7 +35,7 @@ const Contact = () => {
             </div>
           </a>
           <a
-            href="https://www.linkedin.com/in/juan-ignacio-errecart-585431283/"
+            href="https://www.linkedin.com/in/juan-ignacio-errecart/"
             target="_blanck"
           >
             <div className="item-c">
@@ -89,7 +88,7 @@ const Contact = () => {
           </div>
           <div>
             <h5>available in answers:</h5>
-            <p>2 to 4hrs.</p>
+            <p>1 to 2hrs.</p>
           </div>
         </div>
       </div>

@@ -85,9 +85,15 @@ const Education = () => {
       id: 14,
       title: "UX/UI Design",
       icon: "assets/icons/knowledge/design.svg",
-      state: "NEW!!",
       color: "#c1c1c1"
-    }
+    },
+    // {
+    //   id: 15,
+    //   title: "SQL",
+    //   state:"NEW!!",
+    //   icon:"/assets/icons/knowledge/SQL.svg",
+    //   color:"#4b54ff"
+    // }
   ];
 
   return (

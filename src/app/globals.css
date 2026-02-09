@@ -31,7 +31,7 @@
   --text-100:#000000;
   --text-200:#313131;
   --bg-100:#ffffff;
-  --bg-200:#ECECEC;
+  --bg-200:#e2e2e2;
   --bg-300:#d1d1d1;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .App{
-  background-color: var(--bg-200);
+  background: linear-gradient(90deg, var(--bg-100) 0%, var(--bg-300) 100%);
 }
 
 p, ul li, button{
@@ -85,6 +85,7 @@ button{
 }
 
 #experience,
+#education,
 #main,
 #contact{
   position: relative;
@@ -108,7 +109,7 @@ svg{
 
 @media (max-width: 800px) {
   .container {
-    padding: 2rem 3rem;
+    padding: 1.5rem 3rem;
   }
 }
 
@@ -116,11 +117,5 @@ svg{
   .container h2 {
     font-size: 38px;
     padding: 1rem 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .container {
-    padding: 3rem;
   }
 }

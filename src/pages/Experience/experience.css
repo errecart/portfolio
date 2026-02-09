@@ -7,7 +7,7 @@
 }
 
 .experience-item {
-  background: var(--bg-100);
+  background: linear-gradient(90deg, var(--bg-100) 0%, var(--bg-300) 100%);
   border-radius: 1.2rem;
   box-shadow: 0 4px 24px rgba(255, 255, 255, 0.07);
   border: 2px solid var(--primary-200);
@@ -43,6 +43,7 @@
 
 .experience-item ul {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1rem;
@@ -60,7 +61,11 @@
   box-shadow: 0 1px 4px rgba(225, 0, 0, 0.05);
 }
 
-/* Responsive tweaks */
+.window_icon:hover{
+  fill: var(--primary-200);
+}
+
+
 @media (max-width: 600px) {
   .experience-developer {
     grid-template-columns: 1fr;
@@ -69,12 +74,15 @@
   .experience-item {
     padding: 1rem;
   }
+  .experience-icon{
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media (max-width: 515px) {
   .experience-item {
-    padding:1rem;
-    width: 200px;
+    width: 270px;
     p{
       font-size: .5rem;
     }
