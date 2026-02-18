@@ -55,7 +55,7 @@ const Education = () => {
       id: 9,
       title: "Bootstrap",
       icon: "assets/icons/knowledge/bootstrap.svg",
-      color: "#7a097b"
+      color: "#9a0c9c"
     },
     {
       id: 10,
@@ -87,13 +87,14 @@ const Education = () => {
       icon: "assets/icons/knowledge/design.svg",
       color: "#c1c1c1"
     },
-    // {
-    //   id: 15,
-    //   title: "SQL",
-    //   state:"NEW!!",
-    //   icon:"/assets/icons/knowledge/SQL.svg",
-    //   color:"#4b54ff"
-    // }
+    {
+      id: 15,
+      title: "SQL",
+      state:"NEW!!",
+      icon:"/assets/icons/knowledge/SQL.svg",
+      color: "#df7200",
+      gradient: "linear-gradient(90deg, #df7200, #1267eb)"
+    }
   ];
 
   return (
@@ -101,7 +102,7 @@ const Education = () => {
       <h2> Knowledge</h2>
       <div className="knowledge-container">
         {change.map((e) => (
-          <div className="knowledge-item" key={e.id} style={{ "--hover-color": e.color, "--active-color": e.color }}>
+          <div className="knowledge-item" key={e.id} style={{ "--hover-color": e.color, "--active-color": e.color, "--hover-gradient": e.gradient || e.color }}>
             {e.state && <span className="new">{e.state}</span>}
             <img src={e.icon} alt={`${e.title} icon`} />
             <h4>{e.title}</h4>

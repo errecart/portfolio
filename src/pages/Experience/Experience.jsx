@@ -6,7 +6,7 @@ const Experience = () => {
     {
       id: 1,
       title: "GETOUT STUDIO",
-      text: "creation of the page to video game studio",
+      text: "Website Development for a Video Game Studio, implementing the design provided by the studio and creating a responsive and visually appealing website to showcase their projects and services.",
       categories: [
         {
           src: "assets/icons/knowledge/react.svg",
@@ -41,7 +41,7 @@ const Experience = () => {
     {
       id: 2,
       title: "PEPOLA",
-      text: "Creation of the page to video game studio",
+      text: "Website Development for a Video Game Studio, implementing the design provided by the studio and creating a responsive and visually appealing website to showcase their projects and services.",
       categories: [
         {
           src: "assets/icons/knowledge/tailwindcss.svg",
@@ -71,7 +71,7 @@ const Experience = () => {
     {
       id: 3,
       title: "Flora EXP",
-      text: "Plant care app with a gaming experience.",
+      text: "Plant care app with a gaming experience. Use in the CoderHouse Bootcamp to learn design and UX/UI principles, creating a case study for the app's design and user experience.",
       categories: [
         {
           src: "assets/icons/knowledge/figma.svg",
@@ -96,7 +96,7 @@ const Experience = () => {
     {
       id: 4,
       title: "Visdan Agency",
-      text: "Frontend developer position for a digital marketing studio, also developing the studio's website",
+      text: "Frontend developer position for a digital marketing studio. I work closely with the design team to implement visually appealing and responsive websites for the studio's clients, ensuring a seamless user experience across all devices.",
       categories: [
         {
           src: "assets/icons/knowledge/nextdotjs.svg",
@@ -150,7 +150,7 @@ const Experience = () => {
     {
       id: 6,
       title: "LunluntaWines",
-      text: "Implementation of design for a new responsive website for a renowned vineyard, Argentina.",
+      text: "Implementation of design for a new responsive website for a renowned vineyard, ensuring a visually appealing and user-friendly experience across all devices.",
       categories: [
         {
           src: "assets/icons/knowledge/html5.svg",

@@ -6,15 +6,16 @@ const MainAni = () => {
   return (
     <div className="MainAni container">
       <div className="main_info" id="main">
-        <span>Front-end Developer & UX/UI Designer</span>
+        <span>
+          Frontend Developer specialized in React & Next.js Building scalable
+          and high-performance web applications.
+        </span>
         <h1>Juan Ignacio Errecart</h1>
         <p>
-          Front-end Developer with experience developing responsive and
-          interactive web applications. I'm familiar with HTML, CSS, JavaScript
-          and modern frameworks such as React and Next.js. In addition, I'm
-          expanding my skills in UX/UI Design, focusing on creating
-          user-centered, intuitive, and visually engaging interfaces using tools
-          like Figma.
+          Frontend developer specializing in React and Next.js, focused on
+          creating scalable, high-performance web applications. I combine
+          technical precision with UX knowledge to deliver clean, functional,
+          and product-oriented digital experiences.
         </p>
         <section className="main_links">
           <a href="https://github.com/errecart" target="_blank">

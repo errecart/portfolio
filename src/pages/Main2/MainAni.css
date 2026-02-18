@@ -13,16 +13,20 @@
   text-align: center;
   color: var(--text-100);
 }
+
+
 .main_info span {
   font-size: 1.5rem;
   color: var(--primary-200);
   line-height: 2ch;
+  width: 100%;
+  padding-inline: 10rem;
 }
 .main_info p {
   font-size: 1.1rem;
   line-height: 2.3ch;
   opacity: 60%;
-  width:45%;
+  width:55%;
 }
 
 .main_links{
@@ -53,9 +57,16 @@
   }
 }
 
+@media (max-width: 900px){
+  .main_info span{
+    padding-inline: 3.6rem;
+  }
+}
+
+
 @media (max-width: 530px) {
   .main_info h1 {
-    font-size: 4rem;
+    font-size: 3.7rem;
   }
   .main_info p {
     font-size: .8rem
@@ -63,6 +74,13 @@
 
   .main_info span{
     padding-inline: 3.6rem;
+    font-size: .8rem
+  }
+}
+
+@media (max-width: 390px){
+    .main_info span{
+    padding-inline: 1rem;
   }
 }
 
