@@ -91,7 +91,7 @@ const Education = () => {
       id: 15,
       title: "SQL",
       state:"NEW!!",
-      icon:"/assets/icons/knowledge/SQL.svg",
+      icon:"assets/icons/knowledge/SQL.svg",
       color: "#df7200",
       gradient: "linear-gradient(90deg, #df7200, #1267eb)"
     }
