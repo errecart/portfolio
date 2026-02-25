@@ -94,6 +94,13 @@ const Education = () => {
       icon:"/assets/icons/knowledge/SQL.svg",
       color: "#df7200",
       gradient: "linear-gradient(90deg, #df7200, #1267eb)"
+    },
+    {
+      id:16,
+      title:"TypeScript",
+      state:"NEW!!",
+      color:"#3178c6",
+      icon:"/assets/icons/knowledge/typescript.svg"
     }
   ];
 

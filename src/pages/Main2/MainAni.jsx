@@ -7,8 +7,7 @@ const MainAni = () => {
     <div className="MainAni container">
       <div className="main_info" id="main">
         <span>
-          Frontend Developer specialized in React & Next.js Building scalable
-          and high-performance web applications.
+          Frontend Developer ( React and Next.js ) | UX/UI Design | User Experience Development | Getting Started with Data Analytics
         </span>
         <h1>Juan Ignacio Errecart</h1>
         <p>
