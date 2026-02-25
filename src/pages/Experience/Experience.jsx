@@ -134,7 +134,7 @@ const Experience = () => {
           name: "Design",
         },
       ],
-      link: "https://www.visdan.agency",
+      link: "",
       date: "2024 - 2025",
       mode: "Freelance",
     },
