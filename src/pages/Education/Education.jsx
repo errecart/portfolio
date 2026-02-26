@@ -100,7 +100,7 @@ const Education = () => {
       title:"TypeScript",
       state:"NEW!!",
       color:"#3178c6",
-      icon:"/assets/icons/knowledge/typescript.svg"
+      icon:"assets/icons/knowledge/typescript.svg"
     }
   ];
 
