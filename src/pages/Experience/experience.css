@@ -25,8 +25,8 @@
 
 .experience-item h3 {
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
   color: var(--text-100);
+  margin-inline:.2rem;
 }
 
 .experience-item p {
@@ -39,6 +39,11 @@
   font-size: 0.95rem;
   color: var(--accent-200);
   font-weight: 500;
+}
+
+.experience-date span{
+  font-size: 15px;
+  color: var(--primary-200);
 }
 
 .experience-item ul {
@@ -78,6 +83,11 @@
     width: 25px;
     height: 25px;
   }
+
+  .experience-date span{
+  font-size: 10px;
+  color: var(--primary-200);
+}
 }
 
 @media (max-width: 515px) {
@@ -88,3 +98,15 @@
     }
   }
 }
+
+  @keyframes shine {
+    0% {
+      color: #7fffd4;
+    }
+    50% {
+      color: #4d1438;
+    }
+    100% {
+      color: #7fffd4;
+    }
+  }
