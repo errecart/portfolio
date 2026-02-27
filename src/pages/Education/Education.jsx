@@ -89,6 +89,12 @@ const Education = () => {
     },
     {
       id: 15,
+      title: "API Rest",
+      icon: "assets/icons/knowledge/api.svg",
+      color: "#b85858"
+    },
+    {
+      id: 16,
       title: "SQL",
       state:"NEW!!",
       icon:"assets/icons/knowledge/SQL.svg",
@@ -96,7 +102,7 @@ const Education = () => {
       gradient: "linear-gradient(90deg, #df7200, #1267eb)"
     },
     {
-      id:16,
+      id:17,
       title:"TypeScript",
       state:"NEW!!",
       color:"#3178c6",
