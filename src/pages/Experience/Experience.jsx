@@ -319,7 +319,7 @@ const Experience = () => {
                 ))}
               </ul>
             </div>
-          ))}
+          )).reverse()}
         </div>
       </div>
     </div>
