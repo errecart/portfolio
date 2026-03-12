@@ -180,7 +180,7 @@ const Experience = () => {
     {
       id: 7,
       title: "PlayBook UI",
-      text: "Implementation of design for a new responsive website for a renowned vineyard, ensuring a visually appealing and user-friendly experience across all devices.",
+      text: "New project where I collect, preview, add, and enable anyone to use and add user interface components to their own projects.",
       categories: [
         {
           src: "assets/icons/knowledge/css.svg",
@@ -226,7 +226,7 @@ const Experience = () => {
     {
       id: 8,
       title: "DevPulse",
-      text: "Implementation of design for a new responsive website for a renowned vineyard, ensuring a visually appealing and user-friendly experience across all devices.",
+      text: "New project where you can search for GitHub users and analyze information about their repositories, technologies, and capabilities as programmers.",
       categories: [
         {
           src: "assets/icons/knowledge/tailwindcss.svg",
