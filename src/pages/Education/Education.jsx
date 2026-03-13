@@ -104,7 +104,6 @@ const Education = () => {
     {
       id:17,
       title:"TypeScript",
-      state:"NEW!!",
       color:"#3178c6",
       icon:"assets/icons/knowledge/typescript.svg"
     }
