@@ -94,8 +94,8 @@ const NavBar = () => {
           </li>
         </ul>
         <a
-          href="CV/JuanIgnacioErrecartCVATS.pdf"
-          download="Juan Ignacio Errecart CV ATS"
+          href="CV/JuanIgnacioErrecartCV.pdf"
+          download="Juan Ignacio Errecart CV"
         >
           <button>
             <svg

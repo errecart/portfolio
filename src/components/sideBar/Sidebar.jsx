@@ -148,8 +148,8 @@ export const Sidebar = () => {
         )}
 
         <a
-          href="CV/JuanIgnacioErrecartCVATS.pdf"
-          download="Juan Ignacio Errecart CV ATS"
+          href="CV/JuanIgnacioErrecartCV.pdf"
+          download="Juan Ignacio Errecart CV"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
