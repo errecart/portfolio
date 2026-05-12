@@ -221,7 +221,6 @@ const Experience = () => {
       link: "https://playbookui.netlify.app/",
       date: "2025 (Oct - Dic)",
       mode: "Learning Project",
-      new: "New",
     },
     {
       id: 8,
@@ -257,7 +256,43 @@ const Experience = () => {
       link: "https://devpulseproject.netlify.app/",
       date: "2026 (Jan - Feb)",
       mode: "Learning Project",
-      new: "New",
+    },
+        {
+      id: 9,
+      title: "InRide Media",
+      text: "Creating attractive and functional visual interfaces. Optimizing user experience (UX). Collaborating with the team to turn ideas into real web pages.",
+      categories: [
+        {
+          src: "assets/icons/knowledge/html5.svg",
+          alt: "HTML icon",
+          name: "HTML",
+        },
+        {
+          src: "assets/icons/knowledge/css.svg",
+          alt: "CSS icon",
+          name: "CSS",
+        },
+        {
+          src: "assets/icons/knowledge/javascript.svg",
+          alt: "JavaScript icon",
+          name: "JavaScript",
+        },
+        {
+          src: "assets/icons/knowledge/figma.svg",
+          alt: "Figma icon",
+          name: "Figma",
+        },
+        {
+          src: "assets/icons/knowledge/design.svg",
+          alt: "Design icon",
+          name: "Design",
+        },
+      ],
+      link: "",
+      date: "2026 (May - Present)",
+      mode: "Freelance",
+      new:"New!!"
+
     },
   ];
 
