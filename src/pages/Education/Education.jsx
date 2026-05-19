@@ -94,19 +94,25 @@ const Education = () => {
       color: "#b85858"
     },
     {
-      id: 16,
+      id:16,
+      title:"TypeScript",
+      color:"#3178c6",
+      icon:"assets/icons/knowledge/typescript.svg"
+    },
+    {
+      id: 17,
+      title: "CMS",
+      icon:"assets/icons/knowledge/cms.svg",
+      color: "#a700df",
+    },
+    {
+      id: 18,
       title: "SQL",
       state:"NEW!!",
       icon:"assets/icons/knowledge/SQL.svg",
       color: "#df7200",
       gradient: "linear-gradient(90deg, #df7200, #1267eb)"
     },
-    {
-      id:17,
-      title:"TypeScript",
-      color:"#3178c6",
-      icon:"assets/icons/knowledge/typescript.svg"
-    }
   ];
 
   return (
