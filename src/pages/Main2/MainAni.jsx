@@ -4,8 +4,8 @@ import Animation from "./animation/Animation";
 
 const MainAni = () => {
   return (
-    <div className="MainAni container">
-      <div className="main_info" id="main">
+    <div className="MainAni container" id="main">
+      <div className="main_info">
         <span>
           Frontend Developer ( React and Next.js ) | UX/UI Design | User Experience Development | Getting Started with Data Analytics
         </span>

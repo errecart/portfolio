@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Juan Ignacio Errrecart Portfolio",
   description: "Welcome to my portfolio website. I am a Frontend Web Developer with a passion for creating beautiful and functional websites.",
-  icons:{
-    icon:"/logo.svg"
-  }
+  icons: {
+    icon: '/icons/logo.svg',
+  },
 };
 
 export default function RootLayout({ children }) {
