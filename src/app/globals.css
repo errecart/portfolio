@@ -103,7 +103,7 @@ button{
 svg{
   width: 1.5rem;
   height: 1.5rem;
-  margin-inline:10px;
+  margin-inline:5px;
   fill: var(--text-100);
 }
 

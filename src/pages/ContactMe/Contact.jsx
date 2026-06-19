@@ -17,8 +17,6 @@ const Contact = () => {
     <div className="container" id="contact">
       <h2>Contact Me</h2>
       <div className="contact">
-        {/* <input type="text" /><span>button</span>
-        <p>Write me a message</p> */}
         <div className="contact-container">
           <a href="https://github.com/errecart" target="_blanck">
             <div className="item-c">
