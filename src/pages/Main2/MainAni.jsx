@@ -1,11 +1,13 @@
 import React from "react";
+import ScrollReveal from "@/components/ScrollReveal";
 import "./MainAni.css";
 import Animation from "./animation/Animation";
 
 const MainAni = () => {
   return (
     <div className="MainAni container" id="main">
-      <div className="main_info">
+      <ScrollReveal animation="fade-up">
+        <div className="main_info">
         <span>
           Frontend Developer | UX/UI Design | User
           Experience Development | Getting Started with Data Analytics
@@ -64,7 +66,10 @@ const MainAni = () => {
 
         </section>
       </div>
-      <Animation />
+      </ScrollReveal>
+      <ScrollReveal delay={200} animation="fade-left">
+        <Animation />
+      </ScrollReveal>
     </div>
   );
 };

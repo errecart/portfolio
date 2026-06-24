@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollReveal from "@/components/ScrollReveal";
 import "./experience.css";
 
 const Experience = () => {
@@ -296,66 +297,79 @@ const Experience = () => {
     },
   ];
 
+  const workProjects = developer.filter((item) => item.mode !== "Learning Project");
+  const learningProjects = developer.filter((item) => item.mode === "Learning Project");
+
+  const renderItems = (items) =>
+    items
+      .slice()
+      .reverse()
+      .map((item, index) => (
+        <ScrollReveal key={item.id} delay={index * 100} animation="fade-up">
+          <div className="experience-item">
+            <div>
+              <div className="experience-item-header">
+                <div className="experience-item-title-group">
+                  {item.new ? <span className="experience-badge">{item.new}</span> : null}
+                  <h3>{item.title}</h3>
+                </div>
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="200"
+                      height="200"
+                      viewBox="0 0 15 15"
+                      className="window_icon"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12 13a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v3.5a.5.5 0 0 0 1 0V3h9v9H8.5a.5.5 0 0 0 0 1H12ZM9 6.5v3a.5.5 0 0 1-1 0V7.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 7H5.5a.5.5 0 0 1 0-1h3a.498.498 0 0 1 .5.497"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                ) : null}
+              </div>
+              <p>{item.text}</p>
+              <p className="experience-date">
+                <span>{item.mode}</span> | {item.date}
+              </p>
+            </div>
+            <ul>
+              {item.categories.map((category, index) => (
+                <li key={index}>
+                  <img
+                    className="experience-icon"
+                    src={category.src}
+                    alt={category.alt || category.name}
+                    title={category.name}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </ScrollReveal>
+      ));
+
   return (
     <div className="container" id="experience">
-      <h2>Experience</h2>
+      <ScrollReveal animation="fade-down">
+        <h2>Experience</h2>
+      </ScrollReveal>
       <div className="experience">
-        <div className="experience-developer">
-          {developer.map((item) => (
-            <div className="experience-item" key={item.id}>
-              <div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBlock:".5rem"
-                  }}
-                >
-                  <span style={{color: "var(--primary-200)", fontSize: "18px", marginRight: ".5rem", animation:"shine 2s infinite"}}>{item.new}</span>
-                  <h3>{item.title}</h3>
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="200"
-                        height="200"
-                        viewBox="0 0 15 15"
-                        className="window_icon"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12 13a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v3.5a.5.5 0 0 0 1 0V3h9v9H8.5a.5.5 0 0 0 0 1H12ZM9 6.5v3a.5.5 0 0 1-1 0V7.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 7H5.5a.5.5 0 0 1 0-1h3a.498.498 0 0 1 .5.497"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  ) : null}
-                </div>
-                <p>{item.text}</p>
-                <p className="experience-date">
-                  <span>{item.mode}</span> | {item.date}
-                </p>
-              </div>
-              <ul>
-                {item.categories.map((category, index) => (
-                  <li key={index}>
-                    <img
-                      className="experience-icon"
-                      src={category.src}
-                      alt={category.alt || category.name}
-                      title={category.name}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )).reverse()}
-        </div>
+        <ScrollReveal delay={100} animation="fade-up">
+          <div className="experience-section work-projects">
+            <h3 className="section-title">Professional Experiences</h3>
+            <div className="experience-developer">{renderItems(workProjects)}</div>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={200} animation="fade-up">
+          <div className="experience-section learning-projects">
+            <h3 className="section-title">Learning projects</h3>
+            <div className="experience-developer">{renderItems(learningProjects)}</div>
+          </div>
+        </ScrollReveal>
       </div>
     </div>
   );

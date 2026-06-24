@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollReveal from "@/components/ScrollReveal";
 import "./Education.css";
 
 const Education = () => {
@@ -117,14 +118,18 @@ const Education = () => {
 
   return (
     <div className="container" id="education">
-      <h2> Knowledge</h2>
+      <ScrollReveal animation="fade-down">
+        <h2> Knowledge</h2>
+      </ScrollReveal>
       <div className="knowledge-container">
-        {change.map((e) => (
-          <div className="knowledge-item" key={e.id} style={{ "--hover-color": e.color, "--active-color": e.color, "--hover-gradient": e.gradient || e.color }}>
-            {e.state && <span className="new">{e.state}</span>}
-            <img src={e.icon} alt={`${e.title} icon`} />
-            <h4>{e.title}</h4>
-          </div>
+        {change.map((e, index) => (
+          <ScrollReveal key={e.id} delay={index * 50} animation="zoom-in">
+            <div className="knowledge-item" style={{ "--hover-color": e.color, "--active-color": e.color, "--hover-gradient": e.gradient || e.color }}>
+              {e.state && <span className="new">{e.state}</span>}
+              <img src={e.icon} alt={`${e.title} icon`} />
+              <h4>{e.title}</h4>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </div>
