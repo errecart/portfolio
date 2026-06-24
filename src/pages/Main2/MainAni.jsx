@@ -6,6 +6,7 @@ import Animation from "./animation/Animation";
 const MainAni = () => {
   return (
     <div className="MainAni container" id="main">
+              <Animation />
       <ScrollReveal animation="fade-up">
         <div className="main_info">
         <span>
@@ -66,9 +67,6 @@ const MainAni = () => {
 
         </section>
       </div>
-      </ScrollReveal>
-      <ScrollReveal delay={200} animation="fade-left">
-        <Animation />
       </ScrollReveal>
     </div>
   );

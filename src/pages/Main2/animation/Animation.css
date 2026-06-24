@@ -5,6 +5,7 @@
     left:57%;
     transform: rotate(90deg);
     overflow: hidden;
+    z-index: 0;
     ul{
         display: flex;
         justify-content: center;
