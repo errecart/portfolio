@@ -290,7 +290,7 @@ const Experience = () => {
         },
       ],
       link: "",
-      date: "2026 (May - Present)",
+      date: "2026 (May - Jul)",
       mode: "Freelance",
       new:"New!!"
 

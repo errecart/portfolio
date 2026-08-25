@@ -6,7 +6,7 @@ const Education = () => {
   const change = [
     {
       id: 1,
-      title: "HMTL",
+      title: "HTML",
       icon: "assets/icons/knowledge/html5.svg",
       color: "#f8a307"
     },

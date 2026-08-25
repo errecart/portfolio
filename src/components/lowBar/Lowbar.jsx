@@ -1,44 +1,20 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./lowbar.css";
+import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 
 const Lowbar = () => {
-  const [activeSection, setActiveSection] = useState("main");
-
-  const handleScroll = () => {
-    const sections = ["main", "education", "experience", "contact"];
-    const offsets = sections.map((id) => {
-      const element = document.getElementById(id);
-      return element ? element.offsetTop : 0;
-    });
-
-    const scrollPosition = window.scrollY + 100;
-    for (let i = sections.length - 1; i >= 0; i--) {
-      if (scrollPosition >= offsets[i]) {
-        setActiveSection(sections[i]);
-        break;
-      }
-    }
-  };
-
-  const handleClick = (section) => {
-    setActiveSection(section);
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { activeSection, handleClick } = useSectionNavigation();
   return (
     <div className="lowBar">
         <ul className="lowBar-items">
           <li
             className={`lowBar-item ${activeSection === "main" ? "active" : ""}`}
             onClick={() => handleClick("main")}
+            role="button"
+            tabIndex={0}
+            aria-label="Go to home"
+            onKeyDown={(event) => event.key === "Enter" && handleClick("main")}
           >
             <svg
               className="svg-icon"
@@ -52,6 +28,10 @@ const Lowbar = () => {
           <li
             className={`lowBar-item ${activeSection === "education" ? "active" : ""}`}
             onClick={() => handleClick("education")}
+            role="button"
+            tabIndex={0}
+            aria-label="Go to knowledge"
+            onKeyDown={(event) => event.key === "Enter" && handleClick("education")}
           >
             <svg
               className="svg-icon"
@@ -65,6 +45,10 @@ const Lowbar = () => {
           <li
             className={`lowBar-item ${activeSection === "experience" ? "active" : ""}`}
             onClick={() => handleClick("experience")}
+            role="button"
+            tabIndex={0}
+            aria-label="Go to experience"
+            onKeyDown={(event) => event.key === "Enter" && handleClick("experience")}
           >
             <svg
               className="svg-icon"
@@ -78,6 +62,10 @@ const Lowbar = () => {
           <li
             className={`lowBar-item ${activeSection === "contact" ? "active" : ""}`}
             onClick={() => handleClick("contact")}
+            role="button"
+            tabIndex={0}
+            aria-label="Go to contact"
+            onKeyDown={(event) => event.key === "Enter" && handleClick("contact")}
           >
             <svg
               className="svg-icon"
