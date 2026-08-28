@@ -32,6 +32,8 @@ p{
   margin: 1.5rem;
   border: 2.5px solid var(--primary-200);
   cursor: pointer;
+  color: inherit;
+  font: inherit;
 }
 .item-c:hover {
   box-shadow: 0 8px 32px var(--primary-200);
@@ -53,7 +55,7 @@ p{
 .item-c span,
 .item-c a {
   color: var(--text-100);
-  font-size: 17px;
+  font-size: 15px;
   cursor: pointer;
   transition: ease-in-out 0.5s;
 }

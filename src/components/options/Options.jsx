@@ -1,9 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./options.css";
+import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 
 const Options = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+
+  React.useEffect(() => {
+    const savedTheme = window.localStorage.getItem("theme");
+    const shouldUseLightTheme = savedTheme === "light";
+    document.body.classList.toggle("light-theme", shouldUseLightTheme);
+    setIsDarkMode(!shouldUseLightTheme);
+  }, []);
 
   const toggleTheme = () => {
     if (isDarkMode) {
@@ -11,39 +19,11 @@ const Options = () => {
     } else {
       document.body.classList.remove("light-theme");
     }
+    window.localStorage.setItem("theme", isDarkMode ? "light" : "dark");
     setIsDarkMode(!isDarkMode);
   };
 
-  const [activeSection, setActiveSection] = useState("main");
-
-  const handleScroll = () => {
-    const sections = ["main", "education", "experience", "contact"];
-    const offsets = sections.map((id) => {
-      const element = document.getElementById(id);
-      return element ? element.offsetTop : 0;
-    });
-
-    const scrollPosition = window.scrollY + 100;
-    for (let i = sections.length - 1; i >= 0; i--) {
-      if (scrollPosition >= offsets[i]) {
-        setActiveSection(sections[i]);
-        break;
-      }
-    }
-  };
-
-  const handleClick = (section) => {
-    setActiveSection(section);
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { activeSection, handleClick } = useSectionNavigation();
 
   return (
     <div className="options_container">
@@ -57,7 +37,7 @@ const Options = () => {
           />
         </svg> */}
         <a
-          href="CV/JuanIgnacioErrecartCV.pdf"
+          href="/CV/JuanIgnacioErrecartCV.pdf"
           download="Juan Ignacio Errecart CV"
         >
           <svg
@@ -81,6 +61,10 @@ const Options = () => {
             strokeWidth="1.5"
             stroke="currentColor"
             onClick={toggleTheme}
+            role="button"
+            tabIndex={0}
+            aria-label="Toggle color theme"
+            onKeyDown={(event) => event.key === "Enter" && toggleTheme()}
           >
             <path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
           </svg>
@@ -93,6 +77,10 @@ const Options = () => {
             stroke="currentColor"
             className="size-6"
             onClick={toggleTheme}
+            role="button"
+            tabIndex={0}
+            aria-label="Toggle color theme"
+            onKeyDown={(event) => event.key === "Enter" && toggleTheme()}
           >
             <path
               strokeLinecap="round"
@@ -106,6 +94,10 @@ const Options = () => {
         <div
           className={`sideBar-item ${activeSection === "main" ? "active" : ""}`}
           onClick={() => handleClick("main")}
+          role="button"
+          tabIndex={0}
+          aria-label="Go to home"
+          onKeyDown={(event) => event.key === "Enter" && handleClick("main")}
         >
           <svg
             className="svg-icon"
@@ -120,6 +112,10 @@ const Options = () => {
             activeSection === "education" ? "active" : ""
           }`}
           onClick={() => handleClick("education")}
+          role="button"
+          tabIndex={0}
+          aria-label="Go to knowledge"
+          onKeyDown={(event) => event.key === "Enter" && handleClick("education")}
         >
           <svg
             className="svg-icon"
@@ -134,6 +130,10 @@ const Options = () => {
             activeSection === "experience" ? "active" : ""
           }`}
           onClick={() => handleClick("experience")}
+          role="button"
+          tabIndex={0}
+          aria-label="Go to experience"
+          onKeyDown={(event) => event.key === "Enter" && handleClick("experience")}
         >
           <svg
             className="svg-icon"
@@ -152,6 +152,10 @@ const Options = () => {
             activeSection === "contact" ? "active" : ""
           }`}
           onClick={() => handleClick("contact")}
+          role="button"
+          tabIndex={0}
+          aria-label="Go to contact"
+          onKeyDown={(event) => event.key === "Enter" && handleClick("contact")}
         >
           <a href="#contact">
             <svg

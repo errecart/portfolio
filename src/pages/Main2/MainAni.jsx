@@ -21,7 +21,7 @@ const MainAni = () => {
           and product-oriented digital experiences.
         </p>
         <section className="main_links">
-          <a href="https://github.com/errecart" target="_blank">
+          <a href="https://github.com/errecart" target="_blank" rel="noopener noreferrer">
             <svg
               role="img"
               viewBox="0 0 24 24"
@@ -34,6 +34,7 @@ const MainAni = () => {
           <a
             href="https://www.linkedin.com/in/juan-ignacio-errecart/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +46,7 @@ const MainAni = () => {
             </svg>
           </a>
             <a
-              href="CV/JuanIgnacioErrecartCV.pdf"
+              href="/CV/JuanIgnacioErrecartCV.pdf"
               download="Juan Ignacio Errecart CV"
               className="cv_link cv_download"
             >
