@@ -9,7 +9,7 @@
 }
 .main_info h1 {
   font-size: 6rem;
-  line-height: 2ch;
+  line-height: 1.5ch;
   margin-block: 1rem;
   text-align: center;
   color: var(--text-100);
