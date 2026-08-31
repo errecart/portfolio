@@ -37,7 +37,7 @@ const Options = () => {
           />
         </svg> */}
         <a
-          href="/CV/JuanIgnacioErrecartCV.pdf"
+          href="./CV/JuanIgnacioErrecartCV.pdf"
           download="Juan Ignacio Errecart CV"
         >
           <svg

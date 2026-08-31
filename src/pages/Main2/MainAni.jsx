@@ -46,7 +46,7 @@ const MainAni = () => {
             </svg>
           </a>
             <a
-              href="/CV/JuanIgnacioErrecartCV.pdf"
+              href="./CV/JuanIgnacioErrecartCV.pdf"
               download="Juan Ignacio Errecart CV"
               className="cv_link cv_download"
             >
