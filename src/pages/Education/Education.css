@@ -1,123 +1,162 @@
-.knowledge-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    .knowledge-item{
-      position: relative;
-      overflow: hidden;
-      margin: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-radius: 8px;
-      border: 1.5px solid var(--accent-100);
-      background: linear-gradient(90deg, var(--bg-100) 0%, var(--bg-300) 100%);
-      padding: 15px;
-      cursor: pointer;
-      width: 225px;
-      transition: all 0.3s ease-in-out;
-      
-      h4{
-        font-size: 1.2rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        color: var(--accent-100);
-        padding-left: 5px;
-        z-index: 2;
-      }
-      img{
-        width: 20%;
-        height: 20%;
-        z-index: 2;
-        filter: brightness(0) invert(1);
-      }
-      span{
-        font-size: 12px;
-        animation: shine 2s infinite;
-        z-index: 2;
-      }
-    }
-    
+.knowledge-intro {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  color: var(--text-100);
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
-  .knowledge-item:hover {
-    box-shadow: 0 0 15px var(--hover-color);
-    border: none;
+
+.knowledge-container {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  #education {
+    padding-left: 4.5rem;
   }
-  @keyframes shine {
-    0% {
-      color: #7fffd4;
-    }
-    50% {
-      color: #4d1438;
-    }
-    100% {
-      color: #7fffd4;
-    }
-  }
+}
+
+.knowledge-group {
+  border: 1px solid var(--primary-100);
+  background: linear-gradient(135deg, var(--bg-100) 0%, var(--bg-200) 100%);
+  border-radius: 18px;
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.knowledge-group h3 {
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary-100);
+}
+
+.knowledge-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.knowledge-item {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(90deg, var(--bg-100) 0%, var(--bg-300) 100%);
+  padding: 0.9rem 1rem;
+  min-width: 150px;
+  transition: all 0.3s ease-in-out;
+}
+
+.knowledge-item h4 {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #000000;
+  padding-left: 5px;
+}
+
+.knowledge-item img {
+  position: relative;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  filter: brightness(1) invert(0);
+}
+
+.knowledge-item span {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  animation: shine 2s infinite;
+  z-index: 2;
+}
 
 .knowledge-item::before {
   content: "";
   position: absolute;
-  top: 0;
+  inset: 0;
   left: -100%;
-  width: 100%;
-  height: 100%;
   background: var(--hover-gradient);
   z-index: 1;
-  transition: left 0.5s ease-in-out;
+  transition: left 0.45s ease-in-out;
 }
 
-.knowledge-item:hover h4{
-  color: #000;
+.knowledge-item:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 18px var(--hover-color);
+  border-color: transparent;
+  cursor:pointer;
 }
 
 .knowledge-item:hover::before {
   left: 0;
 }
 
-.knowledge-item:hover img{
+.knowledge-item:hover h4,
+.knowledge-item:hover img {
+  color: #000;
   filter: brightness(0) invert(0);
 }
 
+@keyframes shine {
+  0% {
+    color: #7fffd4;
+  }
+  50% {
+    color: #4d1438;
+  }
+  100% {
+    color: #7fffd4;
+  }
+}
 
 @media (max-width: 775px) {
-  .knowledge-item{ 
-    width: 175px;
+  .knowledge-item {
+    min-width: 130px;
+    padding: 0.75rem 0.85rem;
   }
-
 }
 
 @media (max-width: 650px) {
-  .knowledge-container{
-    .knowledge-item{
-      width: 140px;
-      padding-inline: 5px;
-      h4{
-            font-size: 0.8rem;
-      }
-    }
+  .knowledge-group {
+    padding: 1rem;
+  }
+
+  .knowledge-item {
+    min-width: 120px;
+    padding: 0.7rem 0.75rem;
+  }
+
+  .knowledge-item h4 {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
   }
 }
 
 @media (max-width: 460px) {
-    .knowledge-container{
-    .knowledge-item{
-      width: 120px;
-      padding: 10px;
-      padding-inline: 5px;
+  .knowledge-items {
+    gap: 0.65rem;
+  }
 
-      img{
-        width: 15%;
-        height: 15%;
-      }
-    }
+  .knowledge-item {
+    min-width: calc(50% - 0.5rem);
+    padding: 0.7rem 0.6rem;
+  }
+
+  .knowledge-item img {
+    width: 18px;
+    height: 18px;
   }
 }
-
-
-
-
-
-

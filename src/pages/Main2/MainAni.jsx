@@ -9,18 +9,14 @@ const MainAni = () => {
               <Animation />
       <ScrollReveal animation="fade-up">
         <div className="main_info">
-        <span>
-          Frontend Developer | UX/UI Design | User
-          Experience Development | Getting Started with Data Analytics
-        </span>
-        <h1>Juan Ignacio Errecart</h1>
-        <p>
-          Frontend developer specializing in React and Next.js, focused on
-          creating scalable, high-performance web applications. I combine
-          technical precision with UX knowledge to deliver clean, functional,
-          and product-oriented digital experiences.
-        </p>
-        <section className="main_links">
+          <span className="main_tagline">
+            Frontend Developer · React · Next.js · TypeScript
+          </span>
+          <h1>Juan Ignacio Errecart</h1>
+          <p className="main_intro">
+            Frontend Developer & UI Designer turning complex design systems into production-ready web apps. Clean code, reusable components, and proven experience with international clients and agile teams.
+          </p>
+          <section className="main_links">
           <a href="https://github.com/errecart" target="_blank" rel="noopener noreferrer">
             <svg
               role="img"

@@ -112,15 +112,28 @@ p{
 
 @media (max-width: 580px) {
   .item-c {
-    width: 120px;
-    height: 120px;
-    margin: .5rem;
+    width: clamp(120px, 28vw, 175px);
+    height: clamp(120px, 28vw, 175px);
+    margin: clamp(.5rem, 2vw, 1rem);
+
     svg{
-      width: 1.4rem;
-      height: 1.4rem;
+      width: clamp(1.4rem, 5vw, 2rem);
+      height: clamp(1.4rem, 5vw, 2rem);
     }
+
+    h4 {
+      max-width: 100%;
+      padding: clamp(.25rem, 1.5vw, .5rem) 0;
+      font-size: clamp(.9rem, 3.8vw, 1.2rem);
+      letter-spacing: clamp(.04em, .5vw, .1em);
+      line-height: 1.2;
+    }
+
     a, span{
-      font-size: 12px;
+      max-width: 100%;
+      font-size: clamp(.65rem, 2.8vw, .85rem);
+      line-height: 1.3;
+      overflow-wrap: anywhere;
     }
   }
 
