@@ -292,6 +292,47 @@ const Experience = () => {
       link: "",
       date: "2026 (May - Jul)",
       mode: "Freelance",
+
+    },
+        {
+      id: 10,
+      title: "Instituto Jose de San Martin",
+      text: "Implementation of a new responsive website design for a school in Buenos Aires, enhancing its visual presence and rebuilding the site using Squarespace.",
+      categories: [
+        {
+          src: "assets/icons/knowledge/html5.svg",
+          alt: "HTML icon",
+          name: "HTML",
+        },
+        {
+          src: "assets/icons/knowledge/css.svg",
+          alt: "CSS icon",
+          name: "CSS",
+        },
+        {
+          src: "assets/icons/knowledge/javascript.svg",
+          alt: "JavaScript icon",
+          name: "JavaScript",
+        },
+        {
+          src: "assets/icons/knowledge/figma.svg",
+          alt: "Figma icon",
+          name: "Figma",
+        },
+        {
+          src: "assets/icons/knowledge/design.svg",
+          alt: "Design icon",
+          name: "Design",
+        },
+        {
+          src: "assets/icons/knowledge/squarespace.svg",
+          alt: "SquareSpace icon",
+          name: "SquareSpace"
+        },
+      ],
+      link: "https://www.sanmartinedu.com/",
+      date: "2026 (Jul - Ago)",
+      mode: "Freelance",
       new:"New!!"
 
     },
