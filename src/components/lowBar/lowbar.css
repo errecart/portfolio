@@ -1,5 +1,6 @@
 .lowBar {
-  width: 60%;
+  width: min(60%, 760px);
+  min-width: 320px;
   height: 60px;
   position: fixed;
   left: 50%;

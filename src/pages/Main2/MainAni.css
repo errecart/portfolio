@@ -132,5 +132,9 @@
     font-size: 0.8rem;
     letter-spacing: 0.04em;
   }
+
+  .main_links {
+    flex-wrap: wrap;
+  }
 }
 

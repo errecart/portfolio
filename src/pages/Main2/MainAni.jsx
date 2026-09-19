@@ -1,20 +1,25 @@
+"use client";
 import React from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import "./MainAni.css";
 import Animation from "./animation/Animation";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 
 const MainAni = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="MainAni container" id="main">
               <Animation />
       <ScrollReveal animation="fade-up">
         <div className="main_info">
           <span className="main_tagline">
-            Frontend Developer · React · Next.js · TypeScript
+            {t.main.tagline}
           </span>
           <h1>Juan Ignacio Errecart</h1>
           <p className="main_intro">
-            Frontend Developer & UI Designer turning complex design systems into production-ready web apps. Clean code, reusable components, and proven experience with international clients and agile teams.
+            {t.main.intro}
           </p>
           <section className="main_links">
           <a href="https://github.com/errecart" target="_blank" rel="noopener noreferrer">
@@ -58,7 +63,7 @@ const MainAni = () => {
                     d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11l-5 5Zm-6 4q-.825 0-1.413-.588T4 18v-3h2v3h12v-3h2v3q0 .825-.588 1.413T18 20H6Z"
                   />
                 </svg>{" "}
-                Download CV
+                  {t.main.downloadCv}              
               </button>
             </a>
 

@@ -1,11 +1,14 @@
+"use client";
 import React from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import "./Education.css";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Education = () => {
+  const { t } = useLanguage();
   const skillGroups = [
     {
-      title: "Frontend",
+      key: "frontend",
       items: [
         { id: 1, title: "React", icon: "assets/icons/knowledge/react.svg", color: "#369bf4", featured: true },
         { id: 2, title: "Next.js", icon: "assets/icons/knowledge/nextdotjs.svg", color: "#3c3d3e", featured: true },
@@ -20,7 +23,7 @@ const Education = () => {
       ],
     },
     {
-      title: "Design",
+      key: "design",
       items: [
         { id: 8, title: "Figma", icon: "assets/icons/knowledge/figma.svg", color: "#a17fff" },
         { id: 9, title: "UX/UI Design", icon: "assets/icons/knowledge/design.svg", color: "#c1c1c1" },
@@ -28,7 +31,7 @@ const Education = () => {
       ],
     },
     {
-      title: "Tools & Backend",
+      key: "toolsBackend",
       items: [
         { id: 11, title: "Git", icon: "assets/icons/knowledge/git.svg", color: "#f88007" },
         { id: 12, title: "GitHub", icon: "assets/icons/knowledge/github.svg", color: "#ffffff" },
@@ -43,15 +46,15 @@ const Education = () => {
   return (
     <div className="container" id="education">
       <ScrollReveal animation="fade-down">
-        <h2>Tech Stack</h2>
+        <h2>{t.education.title}</h2>
       </ScrollReveal>
       <p className="knowledge-intro">
-        Core technologies, frameworks, and design tools powering clean component architecture and performance.
+        {t.education.intro}
       </p>
       <div className="knowledge-container">
         {skillGroups.map((group, groupIndex) => (
-          <div className="knowledge-group" key={group.title}>
-            <h3>{group.title}</h3>
+          <div className="knowledge-group" key={group.key}>
+            <h3>{t.education.groups[group.key]}</h3>
             <div className="knowledge-items">
               {group.items.map((item, index) => (
                 <ScrollReveal

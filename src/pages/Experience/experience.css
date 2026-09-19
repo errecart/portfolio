@@ -117,6 +117,7 @@
   font-size: 0.95rem;
   color: var(--text-200);
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 
@@ -141,10 +142,17 @@
 
 @media (max-width: 515px) {
   .experience-item {
-    width: 270px;
-    p{
-      font-size: .5rem;
-    }
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+    letter-spacing: 0.04em;
+  }
+
+  .experience-item p {
+    font-size: 0.85rem;
   }
 }
 

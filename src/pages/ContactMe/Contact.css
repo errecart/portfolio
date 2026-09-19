@@ -56,6 +56,9 @@ p{
 .item-c a {
   color: var(--text-100);
   font-size: 15px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
   cursor: pointer;
   transition: ease-in-out 0.5s;
 }
