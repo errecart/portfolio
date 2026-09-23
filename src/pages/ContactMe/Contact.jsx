@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import "./Contact.css";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { LanguageProvider } from "@/contexts/LanguageContext";
 
 
 const Contact = () => {
@@ -21,7 +20,6 @@ const Contact = () => {
   };
 
   return (
-    <LanguageProvider>
       <div className="container" id="contact">
         <ScrollReveal animation="fade-down">
           <h2>{t.contact.title}</h2>
@@ -109,7 +107,6 @@ const Contact = () => {
           </ScrollReveal>
         </div>
       </div>
-    </LanguageProvider>
   );
 };
 
