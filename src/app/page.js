@@ -7,10 +7,8 @@ export default function Home() {
   
   return (
     <div className="App">
-      {/* <Sidebar/> */}
       <Options/>
       <Container/>
-      {/* <NavBar/> */}
       <LowBar/>
     </div>
   );
