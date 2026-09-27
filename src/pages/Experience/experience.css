@@ -125,10 +125,10 @@
   .experience-developer {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 2rem 2rem;
+    padding: 2rem 1.75rem;
   }
   .experience-item {
-    padding: 0rem;
+    padding: 1.5rem;
   }
   .experience-icon{
     width: 25px;
