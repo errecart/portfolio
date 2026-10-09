@@ -14,7 +14,8 @@
         margin: 20px;
         font-size: 1rem;
         color: var(--text-100);
-        animation: move-animation 5s linear infinite;
+        animation: move-animation 10s linear infinite;
+        will-change: transform;
         overflow: hidden;
         li{
             border-radius: 5px;
@@ -31,32 +32,71 @@
     }
 }
 
-.animation::after{
-    position : absolute;
+.animation::before,
+.animation::after {
+    position: absolute;
     content: "";
-    top:0;
+    top: 0;
     bottom: 0;
-    right: 0;
-    width: 40px;
-    height: 100%;
+    width: 22%;
+    max-width: 64px;
     pointer-events: none;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
+
+.animation::before {
+    left: 0;
+    mask-image: linear-gradient(to right, black, transparent);
+    -webkit-mask-image: linear-gradient(to right, black, transparent);
+}
+
+.animation::after {
+    right: 0;
+    mask-image: linear-gradient(to left, black, transparent);
+    -webkit-mask-image: linear-gradient(to left, black, transparent);
+}
+
+.animation {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 14%,
+        black 86%,
+        transparent
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 14%,
+        black 86%,
+        transparent
+    );
+}
+
 .animation ul:nth-child(2) {
     animation-direction: reverse;
 }
 .animation ul:nth-child(3) {
-    animation-duration: 8s;
+    animation-duration: 13s;
 }
 .animation ul:nth-child(4) {
-    animation-duration: 6s;
+    animation-duration: 12s;
 }
 
 @keyframes move-animation {
     0% {
-        transform: translateX(-100%);
+        transform: translate3d(-100%, 0, 0);
     }
     100% {
-        transform: translateX(100%);
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animation ul {
+        animation-play-state: paused;
+        will-change: auto;
     }
 }
 
