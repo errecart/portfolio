@@ -1,126 +1,353 @@
+/* =====================================================================
+   Tokens
+   - Neutrals (--bg-*, --text-*): the original black / white palettes, untouched.
+   - Tones: only 2 kept from the redesign -> A = mint, B = lilac.
+   ===================================================================== */
+:root {
+  /* black palette (default) */
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+  --bg-100: #000000;
+  --bg-200: #202020;
+  --bg-300: #312f2f;
+
+  /* neutral helpers that go with the black palette */
+  --muted: #9c9c9d;
+  --line: #2b2c2e;
+  --ghost-line: #6a6b6c;
+  --btn-bg: #e6e6e6;
+  --btn-fg: #17191c;
+  --hover: rgba(255, 255, 255, 0.08);
+  --glass: rgba(0, 0, 0, 0.74);
+  --chip: rgba(255, 255, 255, 0.04);
+  --chip-on: rgba(255, 255, 255, 0.09);
+  --ink: #0b0c0e;
+  --art-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.14), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  --card-ring: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  --lift-shadow: 0 18px 34px -16px rgba(0, 0, 0, 0.85);
+  --dock-shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.8);
+
+  /* tone A (mint) */
+  --tone-a-bg: #0e2f23;
+  --tone-a-fg: #9be8c3;
+  --tone-a-d: #59d499;
+  /* tone B (lilac) */
+  --tone-b-bg: #231d45;
+  --tone-b-fg: #cbbfff;
+  --tone-b-d: #a58bff;
+
+  --ok: #59d499;
+  --hl: rgba(165, 139, 255, 0.42);
+  --blob-a: rgba(89, 212, 153, 0.22);
+  --blob-b: rgba(165, 139, 255, 0.22);
+  --blob-c: rgba(89, 212, 153, 0.18);
+}
+
+.light-theme {
+  /* white palette */
+  --text-100: #000000;
+  --text-200: #313131;
+  --bg-100: #ffffff;
+  --bg-200: #e2e2e2;
+  --bg-300: #d1d1d1;
+
+  --muted: #5b606c;
+  --line: rgba(0, 0, 0, 0.12);
+  --ghost-line: #17191c;
+  --btn-bg: #17191c;
+  --btn-fg: #ffffff;
+  --hover: rgba(0, 0, 0, 0.06);
+  --glass: rgba(255, 255, 255, 0.8);
+  --chip: #ffffff;
+  --chip-on: rgba(255, 255, 255, 0.72);
+  --ink: #111216;
+  --art-shadow: 0 0 0 1px rgba(4, 23, 43, 0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --card-ring: 0 0 0 0 transparent;
+  --lift-shadow: 0 18px 34px -16px rgba(23, 25, 28, 0.3);
+  --dock-shadow: 0 12px 32px -10px rgba(23, 25, 28, 0.3), 0 2px 6px rgba(23, 25, 28, 0.06);
+
+  --tone-a-bg: #d5f2e3;
+  --tone-a-fg: #0b4b2f;
+  --tone-a-d: #1fa56b;
+  --tone-b-bg: #e6dfff;
+  --tone-b-fg: #33256b;
+  --tone-b-d: #7a5cf0;
+
+  --ok: #1b8a57;
+  --hl: #d9ceff;
+  --blob-a: rgba(110, 215, 165, 0.4);
+  --blob-b: rgba(160, 130, 255, 0.34);
+  --blob-c: rgba(110, 215, 165, 0.3);
+}
+
+.tn-a {
+  --tb: var(--tone-a-bg);
+  --tf: var(--tone-a-fg);
+  --td: var(--tone-a-d);
+}
+.tn-b {
+  --tb: var(--tone-b-bg);
+  --tf: var(--tone-b-fg);
+  --td: var(--tone-b-d);
+}
+
+/* =====================================================================
+   Base
+   ===================================================================== */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-geist-sans), sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-:root{
-  --primary-100:#7FFF00;
-  --primary-200:#22D119;
-  --primary-300:#188912;
-  --accent-100:#9356bc;
-  --accent-200:#BC6FF1;
-  --text-100:#ffffff;
-  --text-200:#e0e0e0;
-  --bg-100:#000000;
-  --bg-200:#202020;
-  --bg-300:#312F2F;
+body {
+  background: var(--bg-100);
+  color: var(--text-100);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.light-theme {
-  --primary-100:#FF2222;
-  --primary-200:#FF5151;
-  --primary-300:#c03c3c;
-  --accent-100:#0f6574;
-  --accent-200:#093a43;
-  --text-100:#000000;
-  --text-200:#313131;
-  --bg-100:#ffffff;
-  --bg-200:#e2e2e2;
-  --bg-300:#d1d1d1;
+.serif {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-weight: 400;
 }
 
-.light-theme img {
-  filter: none !important;
+.mono {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-.App{
-  background: linear-gradient(90deg, var(--bg-100) 0%, var(--bg-300) 100%);
-}
-
-p, ul li, button{
-  font-family: var(--font-geist-sans), sans-serif;
-}
-
-ul li{
-  list-style: none;
-}
-
-a{
+a {
+  color: inherit;
   text-decoration: none;
 }
 
-h2{
-  font-size: 35px;
-  color: var(--text-100);
-  font-weight: 600;
+ul,
+li {
+  list-style: none;
 }
 
-h3{
-  font-size: 30px;
-  font-weight: 500;
-  color: var(--primary-300);
+button {
+  font: inherit;
+  color: inherit;
 }
 
-button{
-  padding: 15px 25px;
-  border: none;
-  border: 1px solid var(--bg-300);
-  background-color: var(--bg-300);
-  color: var(--text-100);
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: all 0.5s ease-in-out;
-  font-weight: 700;
-  &:hover{
-    background-color: var(--primary-200);
-    color: var(--text-100);
-  }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--text-100);
+  outline-offset: 3px;
 }
 
-#experience,
-#education,
-#main,
-#contact{
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 12px;
+  z-index: 100;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: 15px;
+}
+.skip:focus {
+  left: 16px;
+}
+
+.page {
+  --gx: clamp(16px, 3vw, 32px);
+  padding-bottom: 116px;
+  overflow-x: clip;
+}
+
+/* every section stays "positioned" so it paints above the fixed tech-stack carousel */
+.section {
   position: relative;
-}
-.container {
-  text-align: center;
-  padding: 4rem 5rem;
-}
-
-.container h2{
-  font-size: 45px;
-  padding: 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(56px, 8vw, 96px) var(--gx);
 }
 
-svg{
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-inline:5px;
-  fill: var(--text-100);
+/* =====================================================================
+   Shared pieces
+   ===================================================================== */
+.ic {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+.ic-sm {
+  width: 16px;
+  height: 16px;
 }
 
-@media (max-width: 800px) {
-  .container {
-    padding: 1.5rem 2.4rem;
-  }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 14px 5px 6px;
+  border-radius: 999px;
+  background: var(--tb);
+  color: var(--tf);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.eyebrow i {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--chip-on);
+  color: var(--tf);
+  box-shadow: inset 0 0 0 2px var(--td);
+  font-style: normal;
+  font-size: 12px;
 }
 
-@media (max-width: 560px) {
-  .container h2 {
-    font-size: 38px;
-    padding: 1rem 0;
-  }
+.section-title {
+  margin-top: 20px;
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+}
+.section-lead {
+  margin-top: 16px;
+  max-width: 56ch;
+  color: var(--muted);
 }
 
-/* Scroll Reveal Animations */
+.sub-title {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, opacity 0.18s ease, translate 0.18s ease;
+}
+.btn:hover {
+  translate: 0 -2px;
+}
+.btn .ic {
+  margin-left: 8px;
+  transition: translate 0.2s ease;
+}
+.btn:hover .ic {
+  translate: 3px 0;
+}
+.btn-fill {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border-color: var(--btn-bg);
+  font-weight: 500;
+}
+.btn-fill:hover {
+  opacity: 0.88;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text-100);
+  border-color: var(--ghost-line);
+}
+.btn-ghost:hover {
+  background: var(--hover);
+}
+
+.tl {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 16px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.tl:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.tl .ic {
+  transition: translate 0.2s ease;
+}
+.tl:hover .ic {
+  translate: 2px -2px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--chip);
+  font-size: 15px;
+  line-height: 1.4;
+}
+.chip-on {
+  border-color: transparent;
+  background: var(--chip-on);
+  color: var(--tf);
+  transition: translate 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.chip-on:hover {
+  translate: 0 -2px;
+  background: var(--tf);
+  color: var(--tb);
+}
+
+.card {
+  padding: clamp(22px, 3vw, 30px);
+  border-radius: 24px;
+  background: var(--tb);
+  color: var(--tf);
+  box-shadow: var(--card-ring);
+}
+.lift {
+  transition: translate 0.28s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.28s ease;
+}
+.lift:hover {
+  translate: 0 -5px;
+  box-shadow: var(--card-ring), var(--lift-shadow);
+}
+
+.tag {
+  display: inline-flex;
+  padding: 2px 11px;
+  border-radius: 999px;
+  background: var(--tb);
+  color: var(--tf);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =====================================================================
+   Scroll reveal (kept from the original portfolio)
+   ===================================================================== */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -247,5 +474,14 @@ svg{
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* phones / tablets: the dock becomes the side rail, leave room for it */
+@media (max-width: 960px) {
+  .page {
+    --gx: 12px;
+    padding-left: 70px;
+    padding-bottom: 40px;
   }
 }

@@ -9,6 +9,16 @@ export const useSectionNavigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // the last section can be shorter than the viewport, so it never reaches the top:
+      // treat "scrolled to the bottom" as being on it.
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 4;
+      if (atBottom && window.scrollY > 0) {
+        setActiveSection(sections[sections.length - 1]);
+        return;
+      }
+
       const scrollPosition = window.scrollY + 100;
       const currentSection = sections.reduce((active, id) => {
         const element = document.getElementById(id);

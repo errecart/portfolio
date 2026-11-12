@@ -1,177 +1,104 @@
-.experience-developer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 5rem;
+/* ---------- work experience rows ---------- */
+.rows {
+  margin-top: 40px;
 }
 
-.experience-item {
-  background: linear-gradient(90deg, var(--bg-100) 0%, var(--bg-300) 100%);
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 24px rgba(255, 255, 255, 0.07);
-  border: 2px solid var(--primary-200);
-  padding: 2rem;
-  transition: box-shadow 0.2s;
+.row {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.experience-item:hover {
-  box-shadow: 0 8px 32px var(--primary-200);
-  cursor:pointer;
-}
-
-.experience-item h3 {
-  font-size: 1.8rem;
-  color: var(--text-100);
-  margin-inline:.2rem;
-}
-
-.experience-item p {
-  margin: 0.5rem 0;
-  font-size: .8rem;
-  color: var(--text-200);
-}
-
-.experience-date {
-  font-size: 0.95rem;
-  color: var(--accent-200);
-  font-weight: 500;
-}
-
-.experience-date span{
-  font-size: 15px;
-  color: var(--primary-200);
-}
-
-.experience-item ul {
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 1rem;
-  padding: 0;
-  list-style: none;
+  gap: 6px 40px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+.rows-end {
+  border-top: 1px solid var(--line);
 }
 
-.experience-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  border-radius: 0.5rem;
-  background: #f5f5f5;
-  padding: 0.3rem;
-  box-shadow: 0 1px 4px rgba(225, 0, 0, 0.05);
+.row-period {
+  flex: 0 0 150px;
+  padding-top: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
-.window_icon:hover{
-  fill: var(--primary-200);
+.row-body {
+  flex: 1 1 380px;
+  min-width: 0;
 }
 
-.experience-section {
-  margin-top: 2rem;
+.row-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.section-title {
-  font-size: 2rem;
-  color: var(--text-100);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.08em;
+.av {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: var(--tb);
+  color: var(--tf);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 15px;
+  font-weight: 500;
+  transition: rotate 0.3s ease, scale 0.3s ease;
+}
+.row:hover .av {
+  rotate: -8deg;
+  scale: 1.08;
+}
+
+.row-title {
+  min-width: 0;
+}
+.row-title h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+}
+.row-new {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-
-.experience-item-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content:center;
-  gap: .5rem;
-  margin-bottom: 0.75rem;
+.row-role {
+  font-size: 15px;
+  color: var(--muted);
 }
 
-.experience-item-title-group {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.experience-badge {
-  color: var(--primary-200);
-  font-size: 0.95rem;
-  font-weight: 700;
-  padding: 0.25rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(56, 189, 248, 0.12);
-  animation: shine 2s infinite;
-}
-
-.experience-item h3 {
-  margin: 0;
-}
-
-.experience-item p {
-  margin: 0.5rem 0;
-  font-size: 0.95rem;
-  color: var(--text-200);
-  line-height: 1.6;
+.row-desc {
+  margin-top: 16px;
+  max-width: 62ch;
   overflow-wrap: anywhere;
 }
 
-
-@media (max-width: 600px) {
-  .experience-developer {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 2rem 1.75rem;
-  }
-  .experience-item {
-    padding: 1.5rem;
-  }
-  .experience-icon{
-    width: 25px;
-    height: 25px;
-  }
-
-  .experience-date span{
-  font-size: 10px;
-  color: var(--primary-200);
-}
+.row-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
 }
 
-@media (max-width: 515px) {
-  .experience-item {
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .section-title {
-    font-size: 1.55rem;
-    letter-spacing: 0.04em;
-  }
-
-  
-.experience-item h3 {
-  font-size: 1.25rem;
-  color: var(--text-100);
-  margin-inline:.2rem;
+.row-link {
+  margin-top: 6px;
 }
 
-  .experience-item p {
-    font-size: 0.65rem;
-  }
+/* ---------- learning projects ---------- */
+.learn-title {
+  margin-top: 80px;
+  font-size: clamp(30px, 3.6vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
-  @keyframes shine {
-    0% {
-      color: #7fffd4;
-    }
-    50% {
-      color: #4d1438;
-    }
-    100% {
-      color: #7fffd4;
-    }
+@media (max-width: 599px) {
+  .row {
+    gap: 6px 0;
   }
+}

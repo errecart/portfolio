@@ -1,0 +1,170 @@
+/* Navigation + page settings: a bottom dock on desktop / tablet,
+   a left side rail on small screens (<= 960px, same breakpoint as before). */
+.rail {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  z-index: 50;
+  margin: 0 auto;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  backdrop-filter: blur(24px) saturate(1.5);
+  box-shadow: var(--dock-shadow);
+  animation: dockin 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.25s backwards;
+}
+
+.seg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.sep {
+  flex: none;
+  width: 1px;
+  height: 24px;
+  margin: 0 6px;
+  background: var(--line);
+}
+
+.rb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-100);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, translate 0.2s ease;
+}
+.rb:hover {
+  background: var(--hover);
+}
+.rb:active {
+  translate: 0 1px;
+}
+.rb.on {
+  background: var(--tb);
+  color: var(--tf);
+}
+
+.lbl {
+  display: inline-block;
+  max-width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  transition: max-width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), margin 0.35s ease, opacity 0.25s ease;
+}
+.rb.on .lbl {
+  max-width: 130px;
+  margin-left: 8px;
+  opacity: 1;
+}
+
+.tip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 14px);
+  translate: -50% 0;
+  white-space: nowrap;
+  padding: 7px 11px;
+  border-radius: 8px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+.rb.on .tip {
+  display: none;
+}
+@media (hover: hover) {
+  .rb:hover .tip,
+  .rb:focus-visible .tip {
+    opacity: 1;
+  }
+}
+
+@keyframes dockin {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes railin {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* side rail */
+@media (max-width: 960px) {
+  .rail {
+    left: 10px;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    margin: 0;
+    width: auto;
+    max-width: none;
+    translate: 0 -50%;
+    flex-direction: column;
+    gap: 4px;
+    padding: 5px;
+    animation-name: railin;
+  }
+  .seg {
+    flex-direction: column;
+  }
+  .sep {
+    width: 24px;
+    height: 1px;
+    margin: 6px 0;
+  }
+  .rb {
+    min-width: 44px;
+    padding: 0;
+  }
+  .lbl {
+    display: none;
+  }
+  .tip {
+    left: calc(100% + 12px);
+    bottom: auto;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}

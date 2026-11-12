@@ -2,7 +2,7 @@ import React from 'react'
 import "./Animation.css"
 const Animation = () => {
   return (
-    <div className="animation">
+    <div className="animation" aria-hidden="true">
       <ul>
         <li>React</li>
         <li>Tailwind</li>

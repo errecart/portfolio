@@ -1,15 +1,13 @@
-
-import LowBar from "@/components/lowBar/Lowbar";
-import Options from "@/components/options/Options";
+import Dock from "@/components/dock/Dock";
 import Container from "@/pages/Container/Container";
 
 export default function Home() {
-  
   return (
-    <div className="App">
-      <Options/>
-      <Container/>
-      <LowBar/>
+    <div className="page">
+      <Dock />
+      <main id="content">
+        <Container />
+      </main>
     </div>
   );
 }

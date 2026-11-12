@@ -1,162 +1,143 @@
-.knowledge-intro {
-  max-width: 760px;
-  margin: 0 auto 2rem;
-  color: var(--text-100);
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.knowledge-container {
+/* ---------- tech stack groups ---------- */
+.stack-grid {
   display: grid;
-  gap: 1.5rem;
-  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 40px;
 }
 
-@media (max-width: 960px) {
-  #education {
-    padding-left: 4.5rem;
-  }
+.stack-item {
+  display: flex;
+  min-width: 0;
+}
+.stack-item > .card {
+  flex: 1;
+  min-width: 0;
+}
+.stack-item:first-child {
+  grid-column: 1 / -1;
 }
 
-.knowledge-group {
-  border: 1px solid var(--primary-100);
-  background: linear-gradient(135deg, var(--bg-100) 0%, var(--bg-200) 100%);
-  border-radius: 18px;
-  padding: 1.25rem;
-  text-align: left;
+.ibox {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  background: var(--chip-on);
+  color: var(--tf);
+  transition: rotate 0.3s ease, scale 0.3s ease;
+}
+.lift:hover .ibox {
+  rotate: -8deg;
+  scale: 1.08;
 }
 
-.knowledge-group h3 {
-  margin-bottom: 1rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--primary-100);
+.stack-title {
+  margin-top: 18px;
 }
 
-.knowledge-items {
+.chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 8px;
+  margin-top: 16px;
 }
 
-.knowledge-item {
-  position: relative;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 12px;
-  border:none;
-  background: linear-gradient(90deg, var(--bg-100) 0%, var(--bg-300) 100%);
-  padding: 0.9rem 1rem;
-  min-width: 150px;
-  transition: all 0.3s ease-in-out;
+.chips .chip {
+  cursor: default;
 }
 
-.knowledge-item h4 {
-  position: relative;
-  z-index: 2;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: #000000;
-  padding-left: 5px;
+/* logos are tinted with the chip's own color, so they flip on hover too */
+.ico {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
-.knowledge-item img {
-  position: relative;
-  z-index: 2;
-  width: 22px;
-  height: 22px;
-  filter: brightness(1) invert(0);
-}
-
-.knowledge-item span {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.5rem;
+.chip-new {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--td);
+  color: var(--tb);
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
-  animation: shine 2s infinite;
-  z-index: 2;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+.chip-on:hover .chip-new {
+  background: var(--tb);
+  color: var(--tf);
 }
 
-.knowledge-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  left: -100%;
-  background: var(--hover-gradient);
-  z-index: 1;
-  transition: left 0.45s ease-in-out;
+/* ---------- how I work ---------- */
+.how-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 48px;
+  margin-top: 72px;
 }
 
-.knowledge-item:hover {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 18px var(--hover-color);
-  cursor:pointer;
-    border:none;
+.how {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
 }
 
-.knowledge-item:hover::before {
-  left: 0;
+.num {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--tb);
+  color: var(--tf);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
 }
 
-.knowledge-item:hover h4,
-.knowledge-item:hover img {
-  color: #000;
-  filter: brightness(0) invert(0);
+.how-title {
+  margin-top: 16px;
+}
+.how-body {
+  margin-top: 10px;
+  color: var(--muted);
 }
 
-@keyframes shine {
-  0% {
-    color: #7fffd4;
-  }
-  50% {
-    color: #4d1438;
-  }
-  100% {
-    color: #7fffd4;
-  }
+/* ---------- education ---------- */
+.edu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 48px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.edu-title {
+  flex: 0 0 160px;
+}
+.edu-list {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+.edu-list p {
+  margin-bottom: 6px;
+}
+.edu-years {
+  color: var(--muted);
 }
 
-@media (max-width: 775px) {
-  .knowledge-item {
-    min-width: 130px;
-    padding: 0.75rem 0.85rem;
-  }
-}
-
-@media (max-width: 650px) {
-  .knowledge-group {
-    padding: 1rem;
-  }
-
-  .knowledge-item {
-    min-width: 120px;
-    padding: 0.7rem 0.75rem;
-  }
-
-  .knowledge-item h4 {
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-  }
-}
-
-@media (max-width: 460px) {
-  .knowledge-items {
-    gap: 0.65rem;
-  }
-
-  .knowledge-item {
-    min-width: calc(50% - 0.5rem);
-    padding: 0.7rem 0.6rem;
-  }
-
-  .knowledge-item img {
-    width: 18px;
-    height: 18px;
+@media (max-width: 760px) {
+  .stack-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

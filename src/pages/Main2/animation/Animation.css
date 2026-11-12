@@ -1,3 +1,6 @@
+/* Tech stack carousel.
+   Motion, position, rotation, masks and timings are exactly the original ones;
+   only the chips (li) got the new pill look with the two kept tones. */
 .animation{
     padding:25px 15px;
     position: fixed;
@@ -6,6 +9,7 @@
     transform: rotate(90deg);
     overflow: hidden;
     z-index: 0;
+    pointer-events: none;
     ul{
         display: flex;
         justify-content: center;
@@ -18,15 +22,42 @@
         will-change: transform;
         overflow: hidden;
         li{
-            border-radius: 5px;
-            background: var(--bg-200);
-            border: 1px solid var(--primary-200);
-            padding: 5px 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 999px;
+            background: var(--tone-a-bg);
+            color: var(--tone-a-fg);
+            padding: 8px 18px 8px 14px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.3;
+            white-space: nowrap;
             opacity: 40%;
-            &:nth-child(3n) {
-                background: var(--primary-200);
-                color: var(--bg-100);
-                border: 1px solid var(--primary-100);
+            &::before{
+                content: "";
+                flex: none;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--tone-a-d);
+            }
+            &:nth-child(even) {
+                background: var(--tone-b-bg);
+                color: var(--tone-b-fg);
+                &::before{
+                    background: var(--tone-b-d);
+                }
+            }
+            /* logo chips keep the logo only, no dot */
+            &:has(> svg)::before{
+                display: none;
+            }
+            svg{
+                width: 1.2em;
+                height: 1.2em;
+                fill: currentColor;
+                flex: none;
             }
         }
     }
