@@ -134,7 +134,7 @@ const Dock = () => {
           <a
             className="rb"
             href={t.cv.cv_link}
-            download={t.cv.cv_link}
+            download={t.cv.cv_filename}
             aria-label={t.dock.cvTip}
           >
             <svg className="ic" viewBox="0 0 24 24" aria-hidden="true">

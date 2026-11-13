@@ -1,8 +1,3 @@
-/* =====================================================================
-   Tokens
-   - Neutrals (--bg-*, --text-*): the original black / white palettes, untouched.
-   - Tones: only 2 kept from the redesign -> A = mint, B = lilac.
-   ===================================================================== */
 :root {
   /* black palette (default) */
   --text-100: #ffffff;

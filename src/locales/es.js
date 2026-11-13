@@ -19,7 +19,7 @@ const es = {
     status: "Disponible para trabajo remoto desde Argentina (GMT-3)",
     h1a: "Juan Ignacio Errecart ",
     h1b: "Desarrollador Frontend.",
-    lead: "Desarrollador frontend con formación en UX/UI. Construyo con React, Next.js y TypeScript, y llevo diseños de Figma a producción sin depender de un diseñador intermedio.",
+    lead: "Desarrollador frontend con formación en UX/UI. Construyo con React, Next.js y TypeScript, y llevo diseños de Figma a producción sin depender de un diseñador intermedio. Ahora aumentando mis conocimientos pare ser un Desarrollador Fullstack.",
     ctaPrimary: "Ver experiencia",
     ctaSecondary: "Contacto",
     cardA: "Variantes filled y ghost",
@@ -53,6 +53,7 @@ const es = {
     ],
     eduTitle: "Educación",
     edu: [
+      { name: "Desarrollador FullStack", years: "2026 – Presente", state: "New!!" },
       { name: "Diseño UX/UI, CoderHouse", years: "2024 – 2025" },
       { name: "Desarrollador Frontend, CoderHouse", years: "2022 – 2023" },
     ],
@@ -68,6 +69,7 @@ const es = {
     },
     behanceLabel: "Caso de estudio en Behance",
     newLabel: "Nuevo",
+    newLabel2:"Pronto"
   },
   contact: {
     title: "Hablemos de un rol o de un proyecto.",
@@ -80,7 +82,8 @@ const es = {
     footer: "© 2026 Juan Ignacio Errecart",
   },
   cv:{
-    cv_link: "/CV/JuanIgnacioErrecartCV(ES).pdf"
+    cv_link: "./CV/JuanIgnacioErrecartCV(ES).pdf",
+    cv_filename: "JuanIgnacioErrecartCV(ES).pdf",
   }
 };
 

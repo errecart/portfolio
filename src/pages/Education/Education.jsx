@@ -39,7 +39,8 @@ const skillGroups = [
       { id: 3, title: "FireBase", icon: "assets/icons/knowledge/firebase.svg" },
       { id: 4, title: "Node.js", icon: "assets/icons/knowledge/nodedotjs.svg" },
       { id: 5, title: "API Rest", icon: "assets/icons/knowledge/api.svg" },
-      { id: 6, title: "SQL", icon: "assets/icons/knowledge/SQL.svg", isNew: true },
+      { id: 6, title: "SQL", icon: "assets/icons/knowledge/SQL.svg"},
+      { id: 7, title: "Express", icon: "assets/icons/knowledge/express.svg", isNew: true },
     ],
   },
 ];
@@ -115,7 +116,7 @@ const Education = () => {
                     />
                     {item.title}
                     {item.isNew ? (
-                      <span className="chip-new">{t.experience.newLabel}</span>
+                      <span className="chip-new">{t.experience.newLabel2}</span>
                     ) : null}
                   </li>
                 ))}
@@ -125,7 +126,7 @@ const Education = () => {
         ))}
       </div>
 
-      <div className="how-grid">
+      {/* <div className="how-grid">
         {t.education.how.map((item, index) => (
           <ScrollReveal
             key={item.title}
@@ -140,7 +141,7 @@ const Education = () => {
             <p className="how-body">{item.body}</p>
           </ScrollReveal>
         ))}
-      </div>
+      </div> */}
 
       <ScrollReveal animation="fade-up">
         <div className="edu">
@@ -148,7 +149,7 @@ const Education = () => {
           <div className="edu-list">
             {t.education.edu.map((entry) => (
               <p key={entry.name}>
-                {entry.name} <span className="edu-years">{entry.years}</span>
+                {entry.name} <span className="edu-years">{entry.years}</span> <span className="chip-new">{entry.state}</span>
               </p>
             ))}
           </div>

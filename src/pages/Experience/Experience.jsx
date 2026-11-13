@@ -126,6 +126,22 @@ const developer = [
     mode: "freelance",
     isNew: true,
   },
+  {
+    id: 11,
+    title: {
+      en:"URL Shortener",
+      es:"acortador-URLs"
+    },
+    text: {
+      en:"A fast and simple link shortener. Convert long URLs into short, functional links using a RESTful API built with Node.js.",
+      es:"A fast and simple link shortener. Convert long URLs into short, functional links using a RESTful API built with Node.js."    
+    },
+    tags: [ "JavaScript","API", "Node.js"],
+    link: "https://github.com/errecart/acortador-URLs",
+    date: { en: "2026 (Oct - Nov)", es: "2026 (Oct - Nov)" },
+    mode: "learning",
+    isNew: true,
+  },
 ];
 
 const workProjects = developer.filter((item) => item.mode !== "learning").reverse();
@@ -137,6 +153,9 @@ const initials = (name) => {
     ? (words[0].charAt(0) + words[1].charAt(0)).toUpperCase()
     : name.slice(0, 2).toUpperCase();
 };
+
+const getTitle = (title, language) =>
+  typeof title === "string" ? title : title[language];
 
 const linkLabel = (url, t) => {
   if (url.includes("behance.net")) return t.experience.behanceLabel;
@@ -181,11 +200,11 @@ const Experience = () => {
               <div className="row-body">
                 <div className="row-head">
                   <span className="av" aria-hidden="true">
-                    {initials(item.title)}
+                    {initials(getTitle(item.title, language))}
                   </span>
                   <div className="row-title">
                     <h3 className="sub-title">
-                      {item.title}
+                      {getTitle(item.title, language)}
                       {item.isNew ? (
                         <span className="tag row-new">{t.experience.newLabel}</span>
                       ) : null}
@@ -238,10 +257,15 @@ const Experience = () => {
               <div className="row-body">
                 <div className="row-head">
                   <span className="av" aria-hidden="true">
-                    {initials(item.title)}
+                    {initials(getTitle(item.title, language))}
                   </span>
                   <div className="row-title">
-                    <h3 className="sub-title">{item.title}</h3>
+                    <h3 className="sub-title">
+                      {getTitle(item.title, language)}
+                        {item.isNew ? (
+                          <span className="tag row-new">{t.experience.newLabel}</span>
+                        ) : null}
+                    </h3>
                     <p className="row-role">{t.experience.modes[item.mode]}</p>
                   </div>
                 </div>

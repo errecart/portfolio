@@ -7,12 +7,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const EMAIL = "jierrecart5@gmail.com";
 
 const LINKS = [
-  { label: "GitHub", href: "https://github.com/errecart" },
-  { label: "Behance", href: "https://www.behance.net/juan-errecart/projects" },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/juan-ignacio-errecart/",
   },
+  { label: "GitHub", href: "https://github.com/errecart" },
+  { label: "Behance", href: "https://www.behance.net/juan-errecart/projects" },
 ];
 
 const ArrowOut = () => (

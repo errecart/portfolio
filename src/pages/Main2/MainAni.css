@@ -6,42 +6,60 @@
 
 .blob {
   position: absolute;
+  top: 50%;
+  left: 50%;
   z-index: -1;
+  width: clamp(320px, 42vw, 520px);
+  height: clamp(320px, 42vw, 520px);
   border-radius: 50%;
   pointer-events: none;
+  --blob-x: 180px;
+  --blob-mid-x: 90px;
+  --blob-y: 120px;
 }
 .blob-a {
-  width: 560px;
-  height: 560px;
-  left: -140px;
-  top: -160px;
-  background: radial-gradient(closest-side, var(--blob-a), transparent);
-  animation: drift 16s ease-in-out infinite alternate;
+  translate: calc(-50% - var(--blob-x)) calc(-50% - var(--blob-y));
+  background: radial-gradient(closest-side, var(--tf), transparent);
+  animation: triangle-orbit 24s ease-in-out infinite;
 }
 .blob-b {
-  width: 540px;
-  height: 540px;
-  right: -120px;
-  top: 20px;
+  translate: calc(-50% + var(--blob-x)) calc(-50% - var(--blob-y));
   background: radial-gradient(closest-side, var(--blob-b), transparent);
-  animation: drift 20s ease-in-out -6s infinite alternate-reverse;
+  animation: triangle-orbit 24s ease-in-out -8s infinite;
 }
 .blob-c {
-  width: 440px;
-  height: 440px;
-  right: 26%;
-  bottom: -180px;
+  translate: -50% calc(-50% + var(--blob-y));
   background: radial-gradient(closest-side, var(--blob-c), transparent);
-  animation: drift 18s ease-in-out -3s infinite alternate;
+  animation: triangle-orbit 24s ease-in-out -16s infinite;
 }
-@keyframes drift {
-  from {
-    translate: 0 0;
-    scale: 1;
+@keyframes triangle-orbit {
+  0% {
+    translate: calc(-50% - var(--blob-x)) calc(-50% - var(--blob-y));
+    transform: rotate(0deg) scale(0.9);
   }
-  to {
-    translate: 46px 34px;
-    scale: 1.14;
+  16.67% {
+    translate: 0 calc(-50% - var(--blob-y));
+    transform: rotate(60deg) scale(1.08);
+  }
+  33.33% {
+    translate: calc(-50% + var(--blob-x)) calc(-50% - var(--blob-y));
+    transform: rotate(120deg) scale(0.9);
+  }
+  50% {
+    translate: calc(-50% + var(--blob-mid-x)) 0;
+    transform: rotate(180deg) scale(1.08);
+  }
+  66.67% {
+    translate: -50% calc(-50% + var(--blob-y));
+    transform: rotate(240deg) scale(0.9);
+  }
+  83.33% {
+    translate: calc(-50% - var(--blob-mid-x)) 0;
+    transform: rotate(300deg) scale(1.08);
+  }
+  100% {
+    translate: calc(-50% - var(--blob-x)) calc(-50% - var(--blob-y));
+    transform: rotate(360deg) scale(0.9);
   }
 }
 
@@ -341,6 +359,13 @@
 }
 
 @media (max-width: 599px) {
+  .blob {
+    width: 58vw;
+    height: 58vw;
+    --blob-x: 18vw;
+    --blob-mid-x: 9vw;
+    --blob-y: 14vw;
+  }
   .hero-art {
     height: auto;
     display: flex;

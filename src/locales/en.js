@@ -19,7 +19,7 @@ const en = {
     status: "Available for remote work from Argentina (GMT-3)",
     h1a: "Juan Ignacio Errecart ",
     h1b: "Frontend Developer.",
-    lead: "Frontend developer trained in UX/UI. I build with React, Next.js and TypeScript, and take Figma designs to production without needing a designer in between.",
+    lead: "Frontend developer trained in UX/UI. I build with React, Next.js and TypeScript, and take Figma designs to production without needing a designer in between. Currently expanding my knowledge to become a Fullstack Developer.",
     ctaPrimary: "See experience",
     ctaSecondary: "Contact",
     cardA: "Filled and ghost variants",
@@ -53,6 +53,7 @@ const en = {
     ],
     eduTitle: "Education",
     edu: [
+      { name: "FullStack Developer", years: "2026 – Present", state: "New!!" },
       { name: "UX/UI Design, CoderHouse", years: "2024 – 2025" },
       { name: "Frontend Developer, CoderHouse", years: "2022 – 2023" },
     ],
@@ -68,6 +69,7 @@ const en = {
     },
     behanceLabel: "Case study on Behance",
     newLabel: "New",
+    newLabel2:"Soon"
   },
   contact: {
     title: "Let's talk about a role or a project.",
@@ -80,7 +82,8 @@ const en = {
     footer: "© 2026 Juan Ignacio Errecart",
   },
   cv:{
-    cv_link: "/CV/JuanIgnacioErrecartCV.pdf"
+    cv_link: "./CV/JuanIgnacioErrecartCV.pdf",
+    cv_filename: "JuanIgnacioErrecartCV.pdf",
   }
 };
 

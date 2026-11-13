@@ -64,7 +64,7 @@
 
 .chip-new {
   padding: 1px 8px;
-  border-radius: 999px;
+  border-radius: 50px;
   background: var(--td);
   color: var(--tb);
   font-size: 10px;

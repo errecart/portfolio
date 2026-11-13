@@ -5,19 +5,6 @@ import "./MainAni.css";
 import Animation from "./animation/Animation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const Sparkle = ({ tone, style }) => (
-  <svg
-    className={`spk ${tone}`}
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-    style={style}
-  >
-    <path
-      fill="currentColor"
-      d="M12 1 Q12 12 23 12 Q12 12 12 23 Q12 12 1 12 Q12 12 12 1Z"
-    />
-  </svg>
-);
 
 const MainAni = () => {
   const { t } = useLanguage();
@@ -90,23 +77,6 @@ const MainAni = () => {
               <span className="c-tag">&lt;/Button&gt;</span>
             </div>
           </div>
-
-          <div className="sticker tn-b sticker-1">Figma</div>
-          <div className="sticker tn-a sticker-2">Next.js</div>
-          <Sparkle
-            tone="tn-a"
-            style={{ right: "40%", top: "-2%", width: 22, height: 22 }}
-          />
-          <Sparkle
-            tone="tn-b"
-            style={{
-              right: "-1%",
-              bottom: "8%",
-              width: 18,
-              height: 18,
-              animationDelay: "1.1s",
-            }}
-          />
         </div>
       </section>
     </div>
