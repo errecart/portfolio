@@ -116,7 +116,7 @@ const Education = () => {
                     />
                     {item.title}
                     {item.isNew ? (
-                      <span className="chip-new">{t.experience.newLabel2}</span>
+                      <span className="chip-new">{t.experience.newLabel}</span>
                     ) : null}
                   </li>
                 ))}

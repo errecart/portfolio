@@ -21,7 +21,7 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata = {
   title: "Juan Ignacio Errrecart Portfolio",
-  description: "Welcome to my portfolio website. I am a Frontend Web Developer with a passion for creating beautiful and functional websites.",
+  description: "Juan Ignacio Errecart, Frontend Developer en React, Next.js y TypeScript con formación UX/UI. Disponible para trabajo remoto (GMT-3).",
   icons: {
     icon: '/logo.svg',
   },
