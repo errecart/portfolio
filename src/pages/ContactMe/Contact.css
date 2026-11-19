@@ -113,7 +113,53 @@
   width: 120px;
   height: 120px;
   margin-bottom: 20px;
-  opacity: 0.92;
+}
+
+.pet-hex {
+  fill: var(--tone-b-bg);
+  stroke: var(--tone-b-d);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.pet-branch {
+  stroke: var(--tone-b-d);
+  fill: none;
+}
+
+.pet-wing {
+  fill: var(--tone-b-d);
+}
+
+.pet-body {
+  fill: var(--tone-b-fg);
+  stroke: var(--tone-b-fg);
+}
+
+.pet-eye-white {
+  fill: #EFEAFB;
+}
+
+.pet-pupil {
+  fill: var(--tone-b-bg);
+}
+
+.light-theme .pet-hex {
+  fill: #2E2450;
+  stroke: #B794FF;
+}
+.light-theme .pet-branch {
+  stroke: #8058E0;
+}
+.light-theme .pet-wing {
+  fill: #8058E0;
+}
+.light-theme .pet-body {
+  fill: #B794FF;
+  stroke: #B794FF;
+}
+.light-theme .pet-pupil {
+  fill: #120E1F;
 }
 
 .contact-links-title {

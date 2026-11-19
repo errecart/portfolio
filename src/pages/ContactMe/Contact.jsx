@@ -67,14 +67,27 @@ const Contact = () => {
           </div>
 
           <div className="contact-links">
-            <img
-              src="pet-portfolio.svg"
-              alt=""
-              aria-hidden="true"
+            <svg
               className="contact-pet"
+              viewBox="0 0 300 300"
               width="120"
               height="120"
-            />
+              aria-hidden="true"
+              focusable="false"
+            >
+              <polygon points="288,150 219,269.5 81,269.5 12,150 81,30.5 219,30.5" className="pet-hex" />
+              <path d="M60 252H240" className="pet-branch" strokeWidth="10" strokeLinecap="round" fill="none" />
+              <polygon points="150,74 222,114 222,226 196,246 104,246 78,226 78,114" className="pet-body" strokeWidth="6" strokeLinejoin="round" />
+              <polygon points="82,140 82,210 100,226 100,152" className="pet-wing" />
+              <polygon points="218,140 218,210 200,226 200,152" className="pet-wing" />
+              <polygon points="88,108 90,68 124,88" className="pet-body" />
+              <polygon points="212,108 210,68 176,88" className="pet-body" />
+              <circle cx="122" cy="134" r="22" className="pet-eye-white" />
+              <circle cx="178" cy="134" r="22" className="pet-eye-white" />
+              <circle cx="125" cy="136" r="8" className="pet-pupil" />
+              <circle cx="181" cy="136" r="8" className="pet-pupil" />
+              <polygon points="142,158 158,158 150,174" className="pet-pupil" />
+            </svg>
             <p className="contact-links-title mono">{t.contact.findMe}</p>
             <ul>
               {LINKS.map((link) => (

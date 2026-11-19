@@ -85,7 +85,15 @@
   width: 36px;
   height: 36px;
   margin-bottom: 20px;
+  color: var(--text-100);
   opacity: 0.9;
+}
+.hero-logo-mark .logo-inner {
+  stroke: var(--tone-b-d);
+  fill: none;
+}
+.hero-logo-mark .logo-accent {
+  fill: var(--tone-b-d);
 }
 
 .badge {

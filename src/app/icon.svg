@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <polygon points="96,50 73,89.84 27,89.84 4,50 27,10.16 73,10.16" fill="none" stroke="#B794FF" stroke-width="6" stroke-linejoin="round"/>
+  <path fill="#B794FF" d="M42.32 62.48L40.016 74L37.52 74C28.976 73.981 26.384 71.792 27.152 62.48Z"/>
+  <path fill="#EFEAFB" d="M37.52 74L47.12 74L56.72 26L47.12 26Z"/>
+  <path fill="#EFEAFB" d="M59.6 26L73.04 26L70.736 37.52L57.296 37.52Z"/>
+  <path fill="#EFEAFB" d="M55.952 44.24L66.512 44.24L64.208 55.76L53.648 55.76Z"/>
+  <path fill="#EFEAFB" d="M52.304 62.48L65.744 62.48L63.44 74L50 74Z"/>
+</svg>

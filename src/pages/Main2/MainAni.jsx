@@ -19,14 +19,22 @@ const MainAni = () => {
 
       <section id="main" className="hero">
         <ScrollReveal animation="fade-up" className="hero-text">
-          <img
-            src="logo-full.svg"
-            alt=""
-            aria-hidden="true"
+          <svg
             className="hero-logo-mark"
+            viewBox="0 0 100 100"
             width="36"
             height="36"
-          />
+            aria-hidden="true"
+            focusable="false"
+          >
+            <polygon points="96,50 73,89.84 27,89.84 4,50 27,10.16 73,10.16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+            <polygon points="90,50 70,84.64 30,84.64 10,50 30,15.36 70,15.36" fill="none" className="logo-inner" strokeWidth="1" strokeLinejoin="round" />
+            <path className="logo-accent" d="M43.76 60.14L41.888 69.5L39.86 69.5C32.918 69.484 30.812 67.706 31.436 60.14Z" />
+            <path fill="currentColor" d="M39.86 69.5L47.66 69.5L55.46 30.5L47.66 30.5Z" />
+            <path fill="currentColor" d="M57.8 30.5L68.72 30.5L66.848 39.86L55.928 39.86Z" />
+            <path fill="currentColor" d="M54.836 45.32L63.416 45.32L61.544 54.68L52.964 54.68Z" />
+            <path fill="currentColor" d="M51.872 60.14L62.792 60.14L60.92 69.5L50 69.5Z" />
+          </svg>
           <div className="badge">
             <span className="dot" aria-hidden="true" />
             <span>{t.main.status}</span>
