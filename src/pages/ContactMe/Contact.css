@@ -108,6 +108,14 @@
   flex: 0 1 300px;
   min-width: min(100%, 240px);
 }
+.contact-pet {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  opacity: 0.92;
+}
+
 .contact-links-title {
   margin-bottom: 8px;
   font-size: 13px;

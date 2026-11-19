@@ -20,10 +20,10 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata = {
-  title: "Juan Ignacio Errrecart Portfolio",
+  title: "Juan Ignacio Errecart Portfolio",
   description: "Juan Ignacio Errecart, Frontend Developer en React, Next.js y TypeScript con formación UX/UI. Disponible para trabajo remoto (GMT-3).",
   icons: {
-    icon: '/logo.svg',
+    icon: '/logo-window.svg',
   },
 };
 

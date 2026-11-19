@@ -80,6 +80,14 @@
   min-width: 0;
 }
 
+.hero-logo-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

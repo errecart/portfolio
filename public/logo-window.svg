@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 100 100" role="img" aria-labelledby="t">
+  <title id="t">Logo Juan Errecart — compacto (un contorno), Violeta (oscuro)</title>
+  <g id="logo-compacto">
+    <polygon id="contorno" points="96,50 73,89.84 27,89.84 4,50 27,10.16 73,10.16" fill="none" stroke="#EFEAFB" stroke-width="6" stroke-linejoin="round"/>
+    <g id="monograma-JE">
+      <path id="gancho" fill="#B794FF" d="M42.32 62.48L40.016 74L37.52 74C28.976 73.981 26.384 71.792 27.152 62.48Z"/>
+      <path id="eje" fill="#EFEAFB" d="M37.52 74L47.12 74L56.72 26L47.12 26Z"/>
+      <path id="brazo-superior" fill="#EFEAFB" d="M59.6 26L73.04 26L70.736 37.52L57.296 37.52Z"/>
+      <path id="brazo-medio" fill="#EFEAFB" d="M55.952 44.24L66.512 44.24L64.208 55.76L53.648 55.76Z"/>
+      <path id="brazo-inferior" fill="#EFEAFB" d="M52.304 62.48L65.744 62.48L63.44 74L50 74Z"/>
+    </g>
+  </g>
+</svg>

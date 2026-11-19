@@ -19,6 +19,14 @@ const MainAni = () => {
 
       <section id="main" className="hero">
         <ScrollReveal animation="fade-up" className="hero-text">
+          <img
+            src="logo-full.svg"
+            alt=""
+            aria-hidden="true"
+            className="hero-logo-mark"
+            width="36"
+            height="36"
+          />
           <div className="badge">
             <span className="dot" aria-hidden="true" />
             <span>{t.main.status}</span>

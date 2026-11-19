@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 100 100" role="img" aria-labelledby="t">
+  <title id="t">Logo Juan Errecart — principal, doble contorno, Violeta (oscuro)</title>
+  <g id="logo-principal">
+    <polygon id="contorno-exterior" points="96,50 73,89.84 27,89.84 4,50 27,10.16 73,10.16" fill="none" stroke="#EFEAFB" stroke-width="1.4" stroke-linejoin="round"/>
+    <polygon id="contorno-interior" points="90,50 70,84.64 30,84.64 10,50 30,15.36 70,15.36" fill="none" stroke="#B794FF" stroke-width="1"/>
+    <g id="monograma-JE">
+      <path id="gancho" fill="#B794FF" d="M43.76 60.14L41.888 69.5L39.86 69.5C32.918 69.484 30.812 67.706 31.436 60.14Z"/>
+      <path id="eje" fill="#EFEAFB" d="M39.86 69.5L47.66 69.5L55.46 30.5L47.66 30.5Z"/>
+      <path id="brazo-superior" fill="#EFEAFB" d="M57.8 30.5L68.72 30.5L66.848 39.86L55.928 39.86Z"/>
+      <path id="brazo-medio" fill="#EFEAFB" d="M54.836 45.32L63.416 45.32L61.544 54.68L52.964 54.68Z"/>
+      <path id="brazo-inferior" fill="#EFEAFB" d="M51.872 60.14L62.792 60.14L60.92 69.5L50 69.5Z"/>
+    </g>
+  </g>
+</svg>

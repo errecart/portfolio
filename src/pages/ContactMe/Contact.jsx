@@ -67,6 +67,14 @@ const Contact = () => {
           </div>
 
           <div className="contact-links">
+            <img
+              src="pet-portfolio.svg"
+              alt=""
+              aria-hidden="true"
+              className="contact-pet"
+              width="120"
+              height="120"
+            />
             <p className="contact-links-title mono">{t.contact.findMe}</p>
             <ul>
               {LINKS.map((link) => (

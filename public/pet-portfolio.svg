@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" role="img" aria-labelledby="t">
+  <title id="t">Búho en reposo (pet-portfolio) — Violeta (oscuro)</title>
+  <g id="buho">
+    <polygon id="escenario" points="288,150 219,269.5 81,269.5 12,150 81,30.5 219,30.5" fill="#1F1835" stroke="#2E2450" stroke-width="2" stroke-linejoin="round"/>
+    <g id="figura">
+      <path id="rama" d="M60 252H240" stroke="#8058E0" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <polygon id="cuerpo" points="150,74 222,114 222,226 196,246 104,246 78,226 78,114" fill="#B794FF" stroke="#B794FF" stroke-width="6" stroke-linejoin="round"/>
+      <polygon id="ala-izquierda" points="82,140 82,210 100,226 100,152" fill="#8058E0"/>
+      <polygon id="ala-derecha" points="218,140 218,210 200,226 200,152" fill="#8058E0"/>
+      <polygon id="oreja-izquierda" points="88,108 90,68 124,88" fill="#B794FF"/>
+      <polygon id="oreja-derecha" points="212,108 210,68 176,88" fill="#B794FF"/>
+      <circle id="ojo-izquierdo" cx="122" cy="134" r="22" fill="#EFEAFB"/>
+      <circle id="ojo-derecho" cx="178" cy="134" r="22" fill="#EFEAFB"/>
+      <circle id="pupila-izquierda" cx="125" cy="136" r="8" fill="#120E1F"/>
+      <circle id="pupila-derecha" cx="181" cy="136" r="8" fill="#120E1F"/>
+      <polygon id="pico" points="142,158 158,158 150,174" fill="#120E1F"/>
+    </g>
+  </g>
+</svg>
